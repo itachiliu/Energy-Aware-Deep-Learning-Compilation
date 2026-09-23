@@ -19,13 +19,14 @@ index of the material is provided in both languages:
 支撑材料。正文中的补充材料指向本仓库（正文简称"配套 GitHub 仓库"），入口文档为
 [`docs/supplementary-material-cn.pdf`](docs/supplementary-material-cn.pdf)（4 页索引）。
 
-材料分七组：文献编码与一致性记录、独立抽查协议、4×4 矩阵计数、0/18 生态表证据、
-检索与筛选计数、最小验证实验的原始数据与作业包、以及窗口后预印本追踪。
+材料分六组：文献编码与一致性记录、独立抽查协议、4×4 矩阵计数、0/18 生态表证据、
+检索与筛选计数，以及最小验证实验的原始数据与作业包。
 
 仓库只保留正文引用的材料与复核结论所需的最小集合：中间工作稿、环境探测脚本、
 未参与论文结果的纯 TensorRT 代码路径，以及被最终版本取代的早期编码轮次均未上传。
 实验的 117 份逐次测量日志汇总为单个压缩包
 `experiment/data/raw-measurement-logs.zip`，不再以 117 个散文件形式存放。
+图形文件及其可编辑源随论文正文保存，不在本仓库重复存放。
 
 ---
 
@@ -41,7 +42,6 @@ index of the material is provided in both languages:
 | `ecosystem/` | Row-by-row evidence for the 18 production stacks and the 0/18 result, including excluded candidates | §II-D; Table 2 |
 | `methodology/` | PRISMA stage counts and the post-window preprint tracking list | Figure 2; §II-E |
 | `experiment/` | Protocol, per-scan result tables, the archived per-run measurement logs, the configuration matrix, the measurement pipeline and the plotting scripts of the small-scale validation experiment | §XIII; Tables 15–16; Figures 10–12 |
-| `figures/` | Editable source and generator scripts for the PRISMA flow diagram and the data-driven figures | Figures 1–5 |
 
 The repository keeps the material the paper points to together with the
 artefacts needed to verify its claims. Intermediate working files, environment
@@ -49,6 +49,8 @@ probes, an unused TensorRT-only code path and the earlier coding rounds that the
 final ones supersede are not shipped. The 117 per-run measurement logs of the
 experiment are collected into a single archive,
 `experiment/data/raw-measurement-logs.zip`, rather than 117 loose files.
+Figures and their editable sources stay with the manuscript and are not
+duplicated here.
 
 ## Key numbers in one place
 
