@@ -1,0 +1,12 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_scan.py --torch-name vit_b_16 --dtype fp32 --batch 1 --tag vit_b_16-torch-eager-fp32-b1 --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260914_163144/results_scan.csv
+[ok] vit_b_16-torch-eager-fp32-b1 rep1: lat=4.197ms p95=4.454 power=247.29098591549297 J/inf=1.0378761576160256
+[ok] vit_b_16-torch-eager-fp32-b1 rep2: lat=4.162ms p95=4.364 power=255.5954794520548 J/inf=1.0637383640706801
+[ok] vit_b_16-torch-eager-fp32-b1 rep3: lat=4.178ms p95=4.398 power=252.19356164383564 J/inf=1.0536339848666687
+[ok] vit_b_16-torch-eager-fp32-b1 rep4: lat=4.178ms p95=4.395 power=251.19945205479453 J/inf=1.0496032294356614
+[ok] vit_b_16-torch-eager-fp32-b1 rep5: lat=4.178ms p95=4.446 power=257.2012328767123 J/inf=1.0746774431866943
+[ok] vit_b_16-torch-eager-fp32-b1 rep6: lat=4.169ms p95=4.368 power=257.5294366197183 J/inf=1.0736890028675916
+[ok] vit_b_16-torch-eager-fp32-b1 rep7: lat=4.170ms p95=4.400 power=259.3443055555556 J/inf=1.0814097861706684
+[ok] vit_b_16-torch-eager-fp32-b1 rep8: lat=4.174ms p95=4.443 power=256.92408450704227 J/inf=1.0723529365824207
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+

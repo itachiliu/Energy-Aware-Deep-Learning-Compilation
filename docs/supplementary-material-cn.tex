@@ -1,0 +1,190 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newcommand{\RepoURL}{https://github.com/itachiliu/Energy-Aware-Deep-Learning-Compilation}
+\title{Supplementary Material\\[4pt]\large 能效感知深度学习编译综述：编码、证据与可复现性}
+\author{何欣程、刘岩}
+\date{2026-09-23}
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.94\textwidth}{\small
+\textbf{本文件的机器可读版本与全部数据文件见配套仓库：}\\
+\url{\RepoURL}\\
+正文中出现的“补充材料”均指该仓库。}}
+\end{center}
+
+\section*{A. 本文件与文件索引}
+正文之外的所有证据按用途分成七组。文件路径相对仓库根目录：
+
+\begin{itemize}[leftmargin=2em,itemsep=1pt]
+  \item \textbf{S1 · 0/18 证据}：\texttt{ecosystem/ecosystem-selection.md}；
+  \item \textbf{S2 · 矩阵计数}：\texttt{matrix/matrix-counts-4x4.md}、
+    \texttt{matrix-counts-4x4.tex}、\texttt{matrix/count\_matrix.py}；
+  \item \textbf{S3 · 编码与一致性}：\texttt{coding/coding-121-final.csv}、
+    \texttt{coding-sheet-A/B-v2.csv}、\texttt{-v3.csv}、
+    \texttt{codebook-*-worked-examples.csv}、
+    \texttt{reconciliation-sheet.csv}、
+    \texttt{reconciliation-resolution-1-full.csv}、
+    \texttt{reconciliation-resolution-2.csv}、
+    \texttt{reconciliation-resolution-final.txt}、
+    以及 \texttt{coding/kappa/} 下的 $\kappa$ 脚本与报告；
+  \item \textbf{S4 · 历史审计}：\texttt{audit/appendix-matrix-code.csv}、
+    \texttt{code\_matrix.py}、\texttt{audit\_internal.py}、
+    \texttt{internal-audit.md}；
+  \item \textbf{S5 · 独立抽查}：\texttt{audit/coding-audit-sample30.csv}、
+    \texttt{coding-audit-protocol.md}、\texttt{audit\_coding.py}；
+  \item \textbf{S6 · 最小验证实验}：\texttt{experiment/}（协议、原始数据、
+    作业包与绘图脚本）；
+  \item \textbf{S7 · 追踪与环境}：\texttt{methodology/2026-preprint-tracking.md}、
+    \texttt{experiment/ENV\_REQUIREMENTS.md}；
+  \item \textbf{检索与筛选}：\texttt{methodology/prisma\_counts.csv}，
+    逐库重建的复核用检索式见论文附录~B。
+\end{itemize}
+
+\section{S1 · 0/18 生态表：系统与证据载体}
+打标依据优先级：论文 $>$ 官方文档 $>$ 公开源码；标注源码位置的条目可直接复核。
+0/18 的范围为“本综述选取的 18 个代表性通用/生产级栈（16 个独立项目）”，
+时间切片为 2026-05。
+
+{\scriptsize
+\begin{tabularx}{\textwidth}{@{}clXX@{}}
+\toprule
+\# & 系统/组件 & 论文/文档证据 & 源码/可复核点 \\
+\midrule
+1 & TVM & chen\_tvm\_2018 & 开源；ProgramMeasurer 位于 \texttt{src/auto\_scheduler/measure.cc} \\
+2 & Ansor（TVM） & zheng\_ansor\_2020 & 同上；代价模型以延迟为默认预测目标 \\
+3 & TVM Unity / Relax & tvm\_unity & 官方仓库/文档（版本定稿固定） \\
+4 & TorchInductor & ansel\_pytorch\_2024 & 官方仓库/文档（版本定稿固定） \\
+5 & Triton & triton & 官方仓库（版本定稿固定） \\
+6 & XLA & openxla & ProfileGuidedLatencyEstimator；GPU Speed-of-Light 代价模型 \\
+7 & IREE & iree & 官方仓库/文档（版本定稿固定） \\
+8 & TensorRT & nvidia\_tensorrt & 文档级；闭源，外围组件开源 \\
+9 & TensorRT-LLM & nvidia\_trtllm & 开源仓库；执行依赖闭源 TRT 运行时 \\
+10 & OpenVINO & intel\_openvino & 官方仓库/文档（版本定稿固定） \\
+11 & ONNX Runtime & onnxruntime & 官方仓库/文档（版本定稿固定） \\
+12 & TFLite / NNAPI & google\_tflite & 文档级；ANEURALNETWORKS\_PREFER\_LOW\_POWER \\
+13 & Core ML & apple\_coreml & 文档级；MLComputeUnits 枚举 \\
+14 & ExecuTorch & executorch & 官方仓库/文档（版本定稿固定） \\
+15 & MNN & mnn & 官方仓库（版本定稿固定） \\
+16 & NCNN & ncnn & 官方仓库（版本定稿固定） \\
+17 & Paddle Lite & paddlelite & 官方仓库（版本定稿固定） \\
+18 & MLC-LLM & mlcllm & 官方仓库（版本定稿固定） \\
+\bottomrule
+\end{tabularx}}
+
+候选未入选的正文可追溯项：vLLM 等服务期连续批处理运行时（决策主体为服务期）、
+2026 预印本（MileStone/AutoPass/DualScale）、torch.compile 的 Dynamo 前端
+（后端由 TorchInductor 承担）。
+
+\section{S2 · 4×4 矩阵计数与空格}
+计数口径：仅统计粒度与机制均落在四类中的附录 A 样本（$n=68$）；编码取自
+\texttt{coding-121-final.csv}，空格判定结合附录编码与正文代表
+（计数脚本 \texttt{matrix/count\_matrix.py}）。
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+粒度单元 & Analytical & Learned & AutoSearch & Agentic \\
+\midrule
+计算图（Graph） & 6 & 3 & 11 & 0 \\
+循环/算子（Loop/Op） & 4 & 4 & 19 & 1 \\
+异构放置（Placement） & 2 & 3 & 5 & 0 \\
+功耗状态（Power） & 4 & 3 & 3 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+行合计：Graph 20、Loop/Op 28、Placement 10、Power 10。
+
+空格（附录计数为 0 且正文无代表）：Placement × Agentic、Power × Agentic。
+Graph × Agentic 计数为 0，但以正文非统计代表（Agentic MLIR）视为非空格。
+
+\section{S3 · 两位编码者独立编码与一致性}
+编码字段为类别、粒度、机制、对象类型四项，均由两位编码者按公开受控词表独立完成；
+编码手册与示例见 \texttt{coding/coding-rubric-v2.md}、\texttt{coding-rubric-v3.md} 与
+\texttt{codebook-v2-worked-examples.csv}、\texttt{codebook-v3-worked-examples.csv}。
+示例表所固定的单元不计入一致性统计。
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+字段 & $N$ & 一致率 & Cohen's $\kappa$ \\
+\midrule
+类别 & 118 & 79.7\% & 0.77 \\
+粒度 & 118 & 74.6\% & 0.66 \\
+机制 & 114 & 73.7\% & 0.65 \\
+对象类型 & 118 & 89.8\% & 0.85 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+机制与对象类型字段在编码手册扩充后进行了第二轮独立编码；第一轮机制的
+$\kappa=0.56$，其偏低的取值正是扩充手册中 M1/M2 判据并重做该轮的动因。
+早期版本中的“核心/桥接/前沿”边界标签 $\kappa=0.46$，已由对象类型字段取代。
+完整脚本与报告见 \texttt{coding/kappa/}。
+
+独立编码共产生 96 个不一致单元（类别 24、粒度 30、机制 30、对象类型 12）。
+两位编码者先各自逐条复议一遍，31 个单元收敛；对其余 65 个单元改按“先定判据、
+再落单元”的方式完成第三轮联合复核，形成覆盖全部 96 个单元的决议表
+（\texttt{reconciliation-resolution-final.txt}）：48 个采编码者 A 的取值、
+16 个采编码者 B 的取值、1 个采用第三值（S01 的粒度）；一度标注待核或注记
+冲突的 3 个单元（S18、S19、S68 的机制）已回查原文后确认。争议清单见
+\texttt{reconciliation-sheet.csv}，前两轮复议记录见
+\texttt{reconciliation-resolution-1-full.csv} 与
+\texttt{reconciliation-resolution-2.csv}，第三轮裁定包见
+\texttt{adjudication-round3-guide.md}，归并脚本见
+\texttt{coding/kappa/merge\_reconciliation.py}。
+
+\section{S4 · 121 行编码文件与历史审计}
+\begin{itemize}[leftmargin=2em,itemsep=1pt]
+  \item 121 行全部给出类别、粒度、机制、对象类型四列编码
+        （\texttt{coding-121-final.csv}；附录镜像
+        \texttt{audit/appendix-matrix-code.csv}）；
+  \item 单编码者阶段的规则式编码与差异清单（\texttt{audit/code\_matrix.py}、
+        \texttt{internal-audit.md}）保留作历史留痕：在该阶段，121 行中 23 行由
+        S 级覆盖改变默认规则；两人独立编码取代它之后，同一规则与最终编码的
+        差异行数升至 87，说明规则式编码无法替代人工判定；
+  \item 六处易争议条目（WELDER、HAQ、Checkmate、Stream、ODiMO、PowerFlow-DNN）
+        的正文依据见 \texttt{matrix/matrix-empty-cells.md}。
+\end{itemize}
+
+\section{S5 · 独立抽查协议（可选）}
+若期刊或审稿人要求非作者抽查：由第三方按
+\texttt{audit/coding-audit-protocol.md} 填写 \texttt{coding-audit-sample30.csv}
+的独立列，运行 \texttt{audit/audit\_coding.py} 输出一致率与 Cohen's $\kappa$。
+
+\section{S6 · 最小验证实验}
+本文“小规模验证实验”一节报告的实验，其测量协议、原始逐次测量、配置矩阵、
+作业包与绘图脚本均在 \texttt{experiment/} 下：说明见
+\texttt{experiment/README.md}，环境与验收命令见
+\texttt{experiment/ENV\_AND\_EXPERIMENT.md}，逐次测量见
+\texttt{experiment/data/}，作业包见 \texttt{experiment/job/}，
+绘图脚本见 \texttt{experiment/scripts/}。
+
+\section{S7 · 2026 窗口后追踪与复现环境}
+2026 年 5 月检索窗口后的预印本追踪（MileStone、AutoPass、DualScale）清单见
+\texttt{methodology/2026-preprint-tracking.md}；批次二实验所需环境与验收命令见
+\texttt{experiment/ENV\_REQUIREMENTS.md}。
+
+\section*{B. 版本与验证状态}
+\begin{itemize}[leftmargin=2em,itemsep=1pt]
+  \item 正文：XeLaTeX 连编通过，无未定义引用；
+  \item 编码：\texttt{coding/kappa/merge\_reconciliation.py}、
+    \texttt{matrix/count\_matrix.py} 与
+    \texttt{coding/kappa/sync\_appendix\_from\_final.py} 可复跑；
+  \item 一致性审计：\texttt{audit/audit\_scope\_appendix\_consistency.py} 报告
+    \texttt{no inconsistencies found}；\texttt{audit/crosscheck\_appendix.py}
+    报告样本表与机器副本 0 处不匹配；
+  \item 编码者：两位编码者独立编码，经两轮复议与第三轮联合裁定；
+    尚未引入非作者独立抽查（S5 为可选补强项）。
+\end{itemize}
+
+\end{document}

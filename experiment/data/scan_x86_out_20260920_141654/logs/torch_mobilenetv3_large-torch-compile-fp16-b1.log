@@ -1,0 +1,17 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_compile.py --torch-name mobilenetv3_large --dtype fp16 --batch 1 --tag mobilenetv3_large-torch-compile-fp16-b1 --compile-mode default --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260920_141654/results_scan.csv
+[compile] mobilenetv3_large-torch-compile-fp16-b1: inductor compile 81.8s (mode=default)
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep1: lat=3.174ms p95=3.413 power=67.97527027027027 J/inf=0.21577785515983208
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep2: lat=3.107ms p95=3.285 power=68.4904109589041 J/inf=0.21280209444513856
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep3: lat=3.118ms p95=3.310 power=68.60776315789474 J/inf=0.21389899130388465
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep4: lat=3.201ms p95=3.444 power=68.71675675675675 J/inf=0.21993638831471124
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep5: lat=3.126ms p95=3.346 power=68.54041666666666 J/inf=0.214286498122495
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep6: lat=3.130ms p95=3.356 power=68.65563380281691 J/inf=0.21491937662289665
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep7: lat=3.137ms p95=3.352 power=69.0579104477612 J/inf=0.21665970665500534
+[ok] mobilenetv3_large-torch-compile-fp16-b1 rep8: lat=3.118ms p95=3.299 power=68.93859154929578 J/inf=0.21494397212455815
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Exception ignored in: <_io.BufferedWriter name=45>
+BrokenPipeError: [Errno 32] Broken pipe
+

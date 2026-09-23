@@ -1,0 +1,8 @@
+host: wqd10nae09g3
+Linux wqd10nae09g3 5.15.0-179-generic #189-Ubuntu SMP Tue May 5 18:20:56 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+name, driver_version, memory.total [MiB], power.draw [W], power.limit [W]
+NVIDIA GeForce RTX 4090, 580.105.08, 23028 MiB, 20.29 W, 450.00 W
+modules:
+Currently Loaded Modulefiles:
+ 1) miniforge3/26.3.2-3   3) cuda/12.8              
+ 2) gcc/11.3.0            4) cudnn/8.9.6.50_cuda12  

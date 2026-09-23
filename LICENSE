@@ -1,0 +1,17 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The data, documentation and scripts in this repository are released under the
+Creative Commons Attribution 4.0 International licence. You are free to share
+and adapt the material for any purpose, provided that appropriate credit is
+given, a link to the licence is provided, and any changes are indicated.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+If you use this material, please cite the accompanying survey:
+
+    Xincheng HE, Yan LIU. A Survey of Energy-Aware Deep Learning Compilation:
+    From Cost Models to Production Compiler Stacks.
+
+Note to the authors: this licence file was added so that the repository is
+usable by default under the terms most journals expect for supplementary data.
+Replace it if you prefer a different licence.

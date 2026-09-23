@@ -1,0 +1,19 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_compile.py --torch-name resnet18 --dtype fp32 --batch 1 --tag resnet18-torch-compile-fp32-b1 --compile-mode default --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260920_141654/results_scan.csv
+[compile] resnet18-torch-compile-fp32-b1: inductor compile 247.9s (mode=default)
+[ok] resnet18-torch-compile-fp32-b1 rep1: lat=1.480ms p95=1.606 power=93.46593220338983 J/inf=0.13830545452946474
+[ok] resnet18-torch-compile-fp32-b1 rep2: lat=1.510ms p95=1.624 power=93.12383333333334 J/inf=0.14062877443711677
+[ok] resnet18-torch-compile-fp32-b1 rep3: lat=1.483ms p95=1.610 power=93.96271428571428 J/inf=0.13933004920983444
+[ok] resnet18-torch-compile-fp32-b1 rep4: lat=1.528ms p95=1.672 power=93.39260273972603 J/inf=0.1426955545773157
+[ok] resnet18-torch-compile-fp32-b1 rep5: lat=1.495ms p95=1.610 power=94.32575342465753 J/inf=0.1410509445674167
+[ok] resnet18-torch-compile-fp32-b1 rep6: lat=1.499ms p95=1.617 power=93.87930555555556 J/inf=0.14068579069268533
+[ok] resnet18-torch-compile-fp32-b1 rep7: lat=1.522ms p95=1.634 power=93.694 J/inf=0.14261391694020015
+[ok] resnet18-torch-compile-fp32-b1 rep8: lat=1.489ms p95=1.609 power=94.265 J/inf=0.1403669295507679
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/_inductor/compile_fx.py:194: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+Exception ignored in: <_io.BufferedWriter name=45>
+BrokenPipeError: [Errno 32] Broken pipe
+

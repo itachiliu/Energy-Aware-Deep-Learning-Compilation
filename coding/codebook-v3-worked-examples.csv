@@ -1,0 +1,17 @@
+sample_id,field,label,clause,rationale
+S02,category,测量,§3 建模 vs 测量,Edge TPU 的能耗/访存刻画属于测量研究，不提出模型
+S13,category,图层,§3 图层 vs Pareto,在计算图上枚举等价变换，核心是图重写
+S36,category,功耗,§3 Pareto vs 功耗,核心是频率与功耗状态编排，不是多目标权衡框架
+S61,granularity,Graph,v2 §2 粒度定义,融合决策发生在计算图层
+S33,granularity,Placement,v2 §2 粒度定义,决策变量是算子落在哪个设备上
+S37,granularity,Power,v2 §2 粒度定义,决策变量是运行时功耗/频率配置
+S13,mechanism,AutoSearch,v2 §2 机制定义,在重写序列上求解，属搜索式机制
+S33,mechanism,Learned,v2 §1 不得记 Other 的情形,强化学习驱动放置决策，必须记 Learned
+S109,mechanism,Other,v2 §1 机制 Other 的判据,基准与测量方法不提出也不使用四类机制
+S71,mechanism,AutoSearch,v3 M1 搜索框架优先,MetaSchedule 的贡献是自动调度框架，内部代价模型不改变归属
+S52,mechanism,Learned,v3 M1 模型本身即贡献,NeuralPower 的贡献是可复用的学习型功耗预测器
+S73,mechanism,Other,v3 M2 Other 与 Analytical 的分界,纯表示与基础设施，无模型也无搜索
+S03,mechanism,Analytical,v3 M2 Other 与 Analytical 的分界,给出解析式能耗估计，属 Analytical
+S13,object_type,通用编译栈,v3 一、对象类型,TASO 作用于通用图编译器
+S115,object_type,测量与基准设施,v3 一、对象类型,能耗测量方法的横向比较
+S121,object_type,测量与基准设施,v3 一、对象类型,推理部署成本测量方法

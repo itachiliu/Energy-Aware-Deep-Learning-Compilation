@@ -1,0 +1,12 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_scan.py --torch-name mobilenetv3_large --dtype fp16 --batch 16 --tag mobilenetv3_large-torch-eager-fp16-b16 --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260920_141654/results_scan.csv
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep1: lat=5.818ms p95=6.173 power=89.78693333333334 J/inf=0.5224035371394347
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep2: lat=5.732ms p95=6.071 power=89.83666666666667 J/inf=0.5149254515593112
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep3: lat=5.680ms p95=5.946 power=90.54311688311688 J/inf=0.5143100490849357
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep4: lat=5.765ms p95=6.079 power=90.67946666666667 J/inf=0.5227518324260078
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep5: lat=5.791ms p95=6.110 power=89.91337837837838 J/inf=0.5206522692776583
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep6: lat=5.782ms p95=6.130 power=90.03068493150684 J/inf=0.5205534256466788
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep7: lat=5.671ms p95=5.927 power=90.95142857142858 J/inf=0.5157735253544055
+[ok] mobilenetv3_large-torch-eager-fp16-b16 rep8: lat=5.744ms p95=6.138 power=90.37068493150686 J/inf=0.519126177317556
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+

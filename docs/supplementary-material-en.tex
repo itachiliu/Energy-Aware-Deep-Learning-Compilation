@@ -1,0 +1,164 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newcommand{\RepoURL}{https://github.com/itachiliu/Energy-Aware-Deep-Learning-Compilation}
+\title{Supplementary Material\\[4pt]\large Energy-Aware Deep Learning Compilation: Coding, Evidence and Reproducibility}
+\author{Xincheng HE, Yan LIU}
+\date{2026-09-23}
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.94\textwidth}{\small
+\textbf{The machine-readable version of this document and all data files are in the companion repository:}\\
+\url{\RepoURL}\\
+Every mention of ``supplementary material'' in the paper refers to that repository.}}
+\end{center}
+
+\section*{A. This document and the file index}
+All evidence beyond the main text is grouped by purpose into seven sets. Paths are given relative to the repository root.
+
+\begin{itemize}[leftmargin=2em,itemsep=1pt]
+  \item \textbf{S1, the 0/18 evidence}: \texttt{ecosystem/ecosystem-selection.md};
+  \item \textbf{S2, matrix counts}: \texttt{matrix/matrix-counts-4x4.md},
+    \texttt{matrix-counts-4x4.tex}, \texttt{matrix/count\_matrix.py};
+  \item \textbf{S3, coding and agreement}: \texttt{coding/coding-121-final.csv},
+    \texttt{coding-sheet-A/B-v2.csv}, \texttt{-v3.csv},
+    \texttt{codebook-*-worked-examples.csv},
+    \texttt{reconciliation-sheet.csv},
+    \texttt{reconciliation-resolution-1-full.csv},
+    \texttt{reconciliation-resolution-2.csv},
+    \texttt{reconciliation-resolution-final.txt},
+    and the $\kappa$ scripts and reports under \texttt{coding/kappa/};
+  \item \textbf{S4, historical audit}: \texttt{audit/appendix-matrix-code.csv},
+    \texttt{code\_matrix.py}, \texttt{audit\_internal.py},
+    \texttt{internal-audit.md};
+  \item \textbf{S5, independent spot check}: \texttt{audit/coding-audit-sample30.csv},
+    \texttt{coding-audit-protocol.md}, \texttt{audit\_coding.py};
+  \item \textbf{S6, small-scale validation experiment}: \texttt{experiment/}
+    (protocol, raw data, job package and plotting scripts);
+  \item \textbf{S7, post-window tracking and environment}:
+    \texttt{methodology/2026-preprint-tracking.md},
+    \texttt{experiment/ENV\_REQUIREMENTS.md};
+  \item \textbf{Search and screening}: \texttt{methodology/prisma\_counts.csv};
+    the per-database reconstructed queries are given in Appendix~B of the paper.
+\end{itemize}
+
+\section{S1. The 0/18 ecosystem table: systems and evidence carriers}
+The evidence hierarchy is paper $>$ official documentation $>$ public source code; entries that name a source location can be checked directly. The 0/18 scope is the 18 representative general-purpose or production-grade stacks selected in this survey (16 independent projects), with a time slice of 2026-05.
+
+{\scriptsize
+\begin{tabularx}{\textwidth}{@{}clXX@{}}
+\toprule
+\# & System / component & Paper or documentation evidence & Source / checkable point \\
+\midrule
+1 & TVM & chen\_tvm\_2018 & Open source; \texttt{ProgramMeasurer} in \texttt{src/auto\_scheduler/measure.cc} \\
+2 & Ansor (TVM) & zheng\_ansor\_2020 & Same as above; the cost model predicts latency by default \\
+3 & TVM Unity / Relax & tvm\_unity & Official repository and documentation (frozen at submission) \\
+4 & TorchInductor & ansel\_pytorch\_2024 & Official repository and documentation (frozen at submission) \\
+5 & Triton & triton & Official repository (frozen at submission) \\
+6 & XLA & openxla & \texttt{ProfileGuidedLatencyEstimator}; GPU Speed-of-Light cost model \\
+7 & IREE & iree & Official repository and documentation (frozen at submission) \\
+8 & TensorRT & nvidia\_tensorrt & Documentation only; closed source, peripheral components open \\
+9 & TensorRT-LLM & nvidia\_trtllm & Open repository; execution depends on the closed TensorRT runtime \\
+10 & OpenVINO & intel\_openvino & Official repository and documentation (frozen at submission) \\
+11 & ONNX Runtime & onnxruntime & Official repository and documentation (frozen at submission) \\
+12 & TFLite / NNAPI & google\_tflite & Documentation only; \texttt{ANEURALNETWORKS\_PREFER\_LOW\_POWER} \\
+13 & Core ML & apple\_coreml & Documentation only; \texttt{MLComputeUnits} enumeration \\
+14 & ExecuTorch & executorch & Official repository and documentation (frozen at submission) \\
+15 & MNN & mnn & Official repository (frozen at submission) \\
+16 & NCNN & ncnn & Official repository (frozen at submission) \\
+17 & Paddle Lite & paddlelite & Official repository (frozen at submission) \\
+18 & MLC-LLM & mlcllm & Official repository (frozen at submission) \\
+\bottomrule
+\end{tabularx}}
+
+Traceable candidates that were not selected: serving-time continuous-batching runtimes such as vLLM (the decision subject is the serving system), 2026 preprints (MileStone, AutoPass, DualScale), and the Dynamo front end of \texttt{torch.compile} (its back end is TorchInductor).
+
+\section{S2. The $4\times4$ matrix counts and empty cells}
+Counting rule: only Appendix~A samples whose granularity and mechanism both fall inside the four categories are counted ($n=68$); the coding comes from \texttt{coding-121-final.csv}, and empty-cell determination combines the Appendix coding with the representative works discussed in the text (counting script \texttt{matrix/count\_matrix.py}).
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+Granularity cell & Analytical & Learned & AutoSearch & Agentic \\
+\midrule
+Graph & 6 & 3 & 11 & 0 \\
+Loop / operator & 4 & 4 & 19 & 1 \\
+Heterogeneous placement & 2 & 3 & 5 & 0 \\
+Power state & 4 & 3 & 3 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Row totals: Graph 20, Loop/Op 28, Placement 10, Power 10.
+
+Empty cells (Appendix count zero and no representative in the text): Placement $\times$ Agentic and Power $\times$ Agentic. Graph $\times$ Agentic has a count of zero but is treated as non-empty because of a non-statistical representative discussed in the text (Agentic MLIR).
+
+\section{S3. Two-coder independent coding and agreement}
+The coded fields are category, granularity, mechanism and object type. Both coders completed them independently against a public controlled vocabulary; the manuals and worked examples are \texttt{coding/coding-rubric-v2.md}, \texttt{coding/coding-rubric-v3.md}, \texttt{codebook-v2-worked-examples.csv} and \texttt{codebook-v3-worked-examples.csv}. Units fixed by the worked-example sheets are excluded from the agreement statistics.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Field & $N$ & Agreement & Cohen's $\kappa$ \\
+\midrule
+Category & 118 & 79.7\% & 0.77 \\
+Granularity & 118 & 74.6\% & 0.66 \\
+Mechanism & 114 & 73.7\% & 0.65 \\
+Object type & 118 & 89.8\% & 0.85 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Mechanism and object type were coded independently a second time after the manual was extended; the first-round mechanism $\kappa=0.56$, and that low value is precisely why the M1/M2 criteria were added to the manual and the field was recoded. The earlier boundary label set (core/bridging/frontier, $\kappa=0.46$) has been replaced by the object-type field. The complete scripts and reports are under \texttt{coding/kappa/}.
+
+Independent coding produced 96 disagreeing units (category 24, granularity 30, mechanism 30, object type 12). The two coders first reconsidered the units one by one, which resolved 31; for the remaining 65 the procedure changed to first fixing a criterion and then applying it, in a third joint round that produced a resolution table covering all 96 units (\texttt{reconciliation-resolution-final.txt}): 48 follow coder~A, 16 follow coder~B and one takes a third value (the granularity of S01). Three units once flagged as pending or conflicting (the mechanism of S18, S19 and S68) were checked against the source papers and confirmed. The disagreement list is \texttt{reconciliation-sheet.csv}, the first two rounds are \texttt{reconciliation-resolution-1-full.csv} and \texttt{reconciliation-resolution-2.csv}, the third-round package is \texttt{adjudication-round3-guide.md}, and the merge script is \texttt{coding/kappa/merge\_reconciliation.py}.
+
+\section{S4. The 121-row coding file and the historical audit}
+\begin{itemize}[leftmargin=2em,itemsep=1pt]
+  \item All 121 rows carry category, granularity, mechanism and object type
+        (\texttt{coding-121-final.csv}; the Appendix mirror is
+        \texttt{audit/appendix-matrix-code.csv});
+  \item The rule-based coding of the single-coder stage and its difference list
+        (\texttt{audit/code\_matrix.py}, \texttt{internal-audit.md}) are kept as a
+        historical trace. At that stage 23 of the 121 rows were changed from the
+        default rule by S-level overrides; after two-coder independent coding
+        replaced it, the number of rows on which the same rule differs from the
+        final coding rose to 87, which shows that rule-based coding cannot
+        substitute for human judgement;
+  \item The textual basis for the six most contestable entries (WELDER, HAQ,
+        Checkmate, Stream, ODiMO and PowerFlow-DNN) is in
+        \texttt{matrix/matrix-empty-cells.md}.
+\end{itemize}
+
+\section{S5. Independent spot-check protocol (optional)}
+If a journal or reviewer asks for a non-author check: a third party fills the independent columns of \texttt{audit/coding-audit-sample30.csv} following \texttt{audit/coding-audit-protocol.md}, then runs \texttt{audit/audit\_coding.py} to obtain the agreement rate and Cohen's $\kappa$.
+
+\section{S6. Small-scale validation experiment}
+For the experiment reported in the small-scale validation experiment section, the measurement protocol, the raw per-run measurements, the configuration matrix, the job package and the plotting scripts are all under \texttt{experiment/}: the description is \texttt{experiment/README.md}, the environment and acceptance commands are \texttt{experiment/ENV\_AND\_EXPERIMENT.md}, the per-run measurements are under \texttt{experiment/data/}, the job package is \texttt{experiment/job/}, and the plotting scripts are \texttt{experiment/scripts/}.
+
+\section{S7. Post-window tracking and reproduction environment}
+The list of preprints tracked after the May 2026 search window (MileStone, AutoPass, DualScale) is \texttt{methodology/2026-preprint-tracking.md}; the environment and acceptance commands needed for the second experiment batch are \texttt{experiment/ENV\_REQUIREMENTS.md}.
+
+\section*{B. Version and verification status}
+\begin{itemize}[leftmargin=2em,itemsep=1pt]
+  \item Main text: continuous XeLaTeX build passes with no undefined references;
+  \item Coding: \texttt{coding/kappa/merge\_reconciliation.py},
+    \texttt{matrix/count\_matrix.py} and
+    \texttt{coding/kappa/sync\_appendix\_from\_final.py} can be re-run;
+  \item Consistency audit: \texttt{audit/audit\_scope\_appendix\_consistency.py}
+    reports \texttt{no inconsistencies found}, and
+    \texttt{audit/crosscheck\_appendix.py} reports 0 mismatches between the
+    sample table and its machine-readable mirror;
+  \item Coders: two coders coded independently, followed by two reconciliation
+    rounds and a third joint resolution round; a non-author spot check has not
+    yet been carried out (S5 is an optional strengthening step).
+\end{itemize}
+
+\end{document}

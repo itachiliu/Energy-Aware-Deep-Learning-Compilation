@@ -1,0 +1,3 @@
+field              N   agreement      kappa
+mechanism        114        0.737     0.649
+object_type      118        0.898     0.849

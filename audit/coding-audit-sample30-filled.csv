@@ -1,0 +1,31 @@
+sample_id,granularity,mechanism,notes
+S06,Loop/Op,AutoSearch,张量算子级自动调优；学习型代价模型服务于搜索
+S07,Loop/Op,AutoSearch,面向张量程序／算子调度的自动搜索框架
+S104,Other,Learned,编译器优化强化学习环境和基准；粒度不限定于DNN图或算子
+S105,Loop/Op,Learned,循环向量化决策由深度强化学习完成
+S109,Other,Other,推理系统基准方法；不是优化器或代价模型
+S112,Other,Other,能效／功耗基准方法；主要功能是测量规范而非功耗状态优化
+S115,Other,Other,能耗测量方法综述／比较；无特定优化粒度
+S118,Other,Analytical,架构碳足迹建模工具；主要是解析／框架化碳模型
+S18,Graph,Analytical,编译器辅助混合精度量化；按层／模型图选择精度并用局部指标驱动
+S19,Graph,Analytical,跨模型图的张量分解内存优化；依赖活跃性分析和规则／开销判断
+S23,Loop/Op,Analytical,算子／张量核生成；以rTile等结构化构造替代大规模搜索
+S26,Loop/Op,Analytical,多面体编译框架；核心是循环／调度表示与解析式变换
+S32,Placement,Other,面向异构AI加速器的DL编译框架；主要是部署／后端适配
+S33,Placement,Learned,设备放置问题；使用强化学习
+S35,Power,Analytical,DVFS感知的GPU推理延迟建模；功耗／频率状态粒度
+S45,Other,Agentic,通过LLM提示生成节能代码；属于LLM驱动代码决策
+S48,Power,AutoSearch,通过频率计划和Pareto前沿降低训练能耗；功耗状态级优化
+S49,Other,AutoSearch,加速器设计空间探索；使用贝叶斯优化搜索
+S55,Loop/Op,AutoSearch,DNN加速器映射／调度设计空间探索；偏循环映射层
+S65,Graph,AutoSearch,计算图级重物化调度；通过MILP／优化求解搜索计划
+S71,Loop/Op,AutoSearch,TVM张量程序自动调度／自动调优框架
+S76,Loop/Op,Other,稀疏张量编译器基础设施；主要是表示和lowering
+S77,Loop/Op,Other,稀疏张量代数到硬件／数据流的抽象机；非搜索／非学习
+S78,Loop/Op,Other,稀疏GPU kernel实现与优化；主要是手工／库级机制
+S82,Graph,AutoSearch,TinyNAS与TinyEngine协同；模型架构搜索为核心
+S86,Loop/Op,Other,面向MCU的混合低精度CNN kernel／library
+S93,Graph,Analytical,CNN推理缓冲区大小降低；基于图／张量生命周期的内存分析
+S94,Other,Analytical,端到端DNN仿真基础设施；以性能／架构建模为主
+S96,Power,Other,DVFS影响的实证测量／刻画；非优化算法
+S97,Power,Analytical,多电压域GPU功耗建模；解析／建模机制

@@ -1,0 +1,17 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_compile.py --torch-name mobilenetv2 --dtype fp32 --batch 1 --tag mobilenetv2-torch-compile-fp32-b1 --compile-mode default --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260914_163144/results_scan.csv
+[compile] mobilenetv2-torch-compile-fp32-b1: inductor compile 159.9s (mode=default)
+[ok] mobilenetv2-torch-compile-fp32-b1 rep1: lat=2.502ms p95=2.638 power=68.54657534246574 J/inf=0.17150791472624496
+[ok] mobilenetv2-torch-compile-fp32-b1 rep2: lat=2.505ms p95=2.666 power=68.86013698630137 J/inf=0.17250086160523392
+[ok] mobilenetv2-torch-compile-fp32-b1 rep3: lat=2.518ms p95=2.699 power=69.32916666666667 J/inf=0.17460452547844652
+[ok] mobilenetv2-torch-compile-fp32-b1 rep4: lat=2.520ms p95=2.676 power=69.39675675675676 J/inf=0.1748844809547676
+[ok] mobilenetv2-torch-compile-fp32-b1 rep5: lat=2.515ms p95=2.700 power=69.71333333333332 J/inf=0.1753476206059007
+[ok] mobilenetv2-torch-compile-fp32-b1 rep6: lat=2.529ms p95=2.741 power=70.10616438356165 J/inf=0.17726667881456207
+[ok] mobilenetv2-torch-compile-fp32-b1 rep7: lat=2.527ms p95=2.710 power=70.02680555555555 J/inf=0.17696109865659204
+[ok] mobilenetv2-torch-compile-fp32-b1 rep8: lat=2.513ms p95=2.673 power=70.07794520547945 J/inf=0.17608354139859178
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Exception ignored in: <_io.BufferedWriter name=45>
+BrokenPipeError: [Errno 32] Broken pipe
+

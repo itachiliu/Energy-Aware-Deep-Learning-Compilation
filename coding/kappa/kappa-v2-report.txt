@@ -1,0 +1,5 @@
+field              N   agreement      kappa
+category         118        0.797     0.772
+boundary         118        0.669     0.463
+granularity      118        0.746     0.659
+mechanism        118        0.661     0.559

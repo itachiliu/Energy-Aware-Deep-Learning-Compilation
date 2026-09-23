@@ -1,0 +1,13 @@
+sample_id,field,label,clause,rationale
+S02,category,测量,§3 建模 vs 测量,Edge TPU 的能耗/访存刻画属于测量研究，不提出模型
+S13,category,图层,§3 图层 vs Pareto,在计算图上枚举等价变换，核心是图重写
+S36,category,功耗,§3 Pareto vs 功耗,核心是频率与功耗状态编排，不是多目标权衡框架
+S61,granularity,Graph,§2 粒度定义,融合决策发生在计算图层
+S33,granularity,Placement,§2 粒度定义,决策变量是算子落在哪个设备上
+S37,granularity,Power,§2 粒度定义,决策变量是运行时功耗/频率配置
+S13,mechanism,AutoSearch,§2 机制定义,在重写序列上求解，属搜索式机制
+S33,mechanism,Learned,§1 不得记 Other 的情形,强化学习驱动放置决策，必须记 Learned
+S109,mechanism,Other,§1 机制 Other 的判据,基准与测量方法不提出也不使用四类机制
+S13,boundary,核心,§4 边界判据,通用图编译器，构成图层章节证据主线
+S115,boundary,桥接,§4 边界判据,能耗测量方法的横向比较，属测量基础设施
+S121,boundary,前沿,§4 边界判据,推理部署成本测量，仅作趋势观察使用

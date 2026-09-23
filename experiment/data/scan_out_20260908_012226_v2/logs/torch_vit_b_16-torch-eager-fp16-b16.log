@@ -1,0 +1,10 @@
+$ /home/bingxing2/home/scx7es6/.conda/envs/cp310cu122/bin/python /home/bingxing2/home/scx7es6/job/measure_torch_scan.py --torch-name vit_b_16 --dtype fp16 --batch 16 --tag vit_b_16-torch-eager-fp16-b16 --reps 8 --duration-s 20.0 --out /home/bingxing2/home/scx7es6/scan_out_20260908_012226/results_scan.csv
+[ok] vit_b_16-torch-eager-fp16-b16 rep1: lat=6.289ms p95=6.461 power=244.18587786259533 J/inf=1.5356436080332811
+[ok] vit_b_16-torch-eager-fp16-b16 rep2: lat=6.371ms p95=7.429 power=244.6094656488549 J/inf=1.5583033752616249
+[ok] vit_b_16-torch-eager-fp16-b16 rep3: lat=6.542ms p95=7.021 power=246.11091603053438 J/inf=1.6101430254319928
+[ok] vit_b_16-torch-eager-fp16-b16 rep4: lat=6.317ms p95=6.418 power=242.01488549618324 J/inf=1.5288809088051274
+[ok] vit_b_16-torch-eager-fp16-b16 rep5: lat=6.282ms p95=6.421 power=243.62656488549624 J/inf=1.5303557056055532
+[ok] vit_b_16-torch-eager-fp16-b16 rep6: lat=6.305ms p95=7.570 power=245.11795454545458 J/inf=1.5454812748978943
+[ok] vit_b_16-torch-eager-fp16-b16 rep7: lat=6.731ms p95=7.379 power=241.05557251908402 J/inf=1.6225379880520345
+[ok] vit_b_16-torch-eager-fp16-b16 rep8: lat=6.632ms p95=8.036 power=241.84221374045808 J/inf=1.6039340428324595
+

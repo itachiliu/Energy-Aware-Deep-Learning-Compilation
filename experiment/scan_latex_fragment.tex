@@ -1,0 +1,70 @@
+% ============================================================================
+% 补充扫描 LaTeX 骨架：编译决策维度（ORT 图优化 × batch）与 torch eager 对照。
+% 数字待实验回填后替换；当前结构可直接并入 subsec:miniexperiment。
+% 建议插入位置：正文"观察三（H3）"之后、"这项实验在本文中的作用与边界"之前。
+% ============================================================================
+
+% --- 段落骨架 ---------------------------------------------------------------
+% \textbf{补充扫描：编译决策维度与批处理。}
+% 为把 H1--H3 的检验从单一执行配置扩展到编译决策维度，我们在同一节点上
+% 对每个模型扫描 ORT CUDA EP 的图优化等级（disable/basic/extended/all，对应
+% 融合与布局重写等图层 pass 的启用程度）与 batch 大小（1/16），并以 PyTorch
+% eager 的 FP32/FP16 作为对照；每个配置按第~\ref{subsec:meas-protocol}~节的
+% 协议连续测量 8 个 20\,s 稳态窗口。表~\ref{tab:scan-supplement}~与
+% 图~\ref{fig:scan-pareto}~汇总了全部 N 个可运行配置。
+%
+% 结果与第~\ref{sec:graph}~节的机理预期一致：对同一模型，开启图优化后
+% 延迟与 J/inf (gross) 同时下降，说明图层融合/布局类 pass 对两个目标大致同向；
+% 而 batch 从 1 增至 16 后，每 batch 调用的 J/inf 上升、折合单样本能耗下降，
+% static 功耗占比随之摊薄。跨配置统计显示，在固定硬件与频率下，延迟最优
+% 配置与能耗最优配置在 X/Y 个（模型,batch）组合中不一致，EDP 代价区间为
+% Z--W\%，为 H2 提供了一组配置空间口径的实测坐标；FLOPs 排序与各配置
+% J/inf 排序不一致的模型比例与第~\ref{subsec:miniexperiment}~节观察一保持一致。
+
+% --- 表骨架 -----------------------------------------------------------------
+\begin{table*}[t]
+  \centering
+  \caption{编译决策维度扫描的代表性配置（跨 8 个稳态窗口的均值±std）。能耗为
+    batch 调用口径；J/inf (net) 扣除冷态 idle；static 为 idle/平均功耗。完整
+    N 个配置见补充数据。}
+  \label{tab:scan-supplement}
+  \renewcommand{\arraystretch}{1.25}
+  \setlength{\tabcolsep}{3.5pt}
+  \footnotesize
+  \begin{tabular}{@{}lllcccclllll@{}}
+    \toprule
+    模型 & 栈 & 精度 & batch & 图优化 & 延迟 (ms) & p95 (ms) &
+    J/inf (gross) & J/inf (net) & EDP & static (\%) \\
+    \midrule
+    % 回填：示例行格式
+    % MobileNetV2 & ORT-CUDA & FP32 & 1 & disable & -- & -- & -- & -- & -- & -- \\
+    % MobileNetV2 & ORT-CUDA & FP32 & 1 & all     & -- & -- & -- & -- & -- & -- \\
+    % MobileNetV2 & ORT-CUDA & FP32 & 16 & all    & -- & -- & -- & -- & -- & -- \\
+    % MobileNetV2 & torch-eager & FP32 & 1 & --- & -- & -- & -- & -- & -- & -- \\
+    % ResNet-50 & ORT-CUDA & FP32 & 1 & disable & -- & -- & -- & -- & -- & -- \\
+    % ResNet-50 & ORT-CUDA & FP32 & 1 & all     & -- & -- & -- & -- & -- & -- \\
+    % ViT-B/16 & ORT-CUDA & FP32 & 1 & all      & -- & -- & -- & -- & -- & -- \\
+    % ViT-B/16 & torch-eager & FP16 & 1 & ---     & -- & -- & -- & -- & -- & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+% --- 图骨架 -----------------------------------------------------------------
+% 图~\ref{fig:scan-pareto}：以平均延迟为横轴、J/inf (gross) 为纵轴的双对数散点，
+% 数据点为全部 N 个配置；按决策类型着色（ORT 图优化 / eager 精度 / batch），
+% 同一模型用同一符号族。建议由 scan 聚合 CSV 直接生成并导出 PDF 300 dpi。
+% \begin{figure}[t]
+%   \centering
+%   \includegraphics[width=\columnwidth]{Figures/experiment_scan.pdf}
+%   \caption{编译决策空间中的延迟--能耗分布（N 个配置）。}
+%   \label{fig:scan-pareto}
+% \end{figure}
+
+% --- 边界表述更新（正文旧口径替换用） ---------------------------------------
+% 原文（L1201 一带）"该实验不需要大规模 benchmark 或新算法贡献，却能完成三件事
+% (i)...(iii)... 局限须如实声明：结果来自单节点、单 batch、特定驱动/运行时版本"
+% 建议改为：
+%   "结果来自单节点、特定驱动/运行时版本；batch 维度已在本节补充扫描中覆盖，
+%   跨环境比较仍以 J/inf (gross) 与 EDP 的相对变化为准。TensorRT 与
+%   torch.compile 路线因平台生态未运行，DRAM 字节数受集群性能计数器权限限制
+%   未能采集。"

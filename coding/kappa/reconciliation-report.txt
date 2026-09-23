@@ -1,0 +1,11 @@
+reconciliation merge (round-3 joint resolution)
+  cells settled in round 1        : 388
+  cells re-adjudicated            : 96
+    round-2 agreement confirmed   : 31
+    round-2 split -> adopted A    : 48
+    round-2 split -> adopted B    : 16
+    round-2 split -> third value  : 1
+  cells whose value changed vs the first-author fallback : 17
+  round-2 converged cells contradicted by round 3        : 0
+  fully coded rows                : 121 / 121
+    third value: S01 granularity = Loop/Op

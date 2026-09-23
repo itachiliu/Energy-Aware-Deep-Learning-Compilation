@@ -1,0 +1,10 @@
+$ /home/bingxing2/home/scx7es6/.conda/envs/cp310cu122/bin/python /home/bingxing2/home/scx7es6/job/measure_torch_scan.py --torch-name resnet50 --dtype fp16 --batch 1 --tag resnet50-torch-eager-fp16-b1 --reps 8 --duration-s 20.0 --out /home/bingxing2/home/scx7es6/scan_out_20260908_012226/results_scan.csv
+[ok] resnet50-torch-eager-fp16-b1 rep1: lat=8.338ms p95=10.879 power=42.55274809160305 J/inf=0.3548218254664527
+[ok] resnet50-torch-eager-fp16-b1 rep2: lat=8.303ms p95=10.905 power=42.559621212121215 J/inf=0.3533602543068253
+[ok] resnet50-torch-eager-fp16-b1 rep3: lat=8.310ms p95=10.903 power=42.48212121212123 J/inf=0.3530147271885906
+[ok] resnet50-torch-eager-fp16-b1 rep4: lat=8.300ms p95=10.919 power=42.525877862595436 J/inf=0.3529551704769129
+[ok] resnet50-torch-eager-fp16-b1 rep5: lat=8.303ms p95=10.923 power=42.52084615384614 J/inf=0.353041229758477
+[ok] resnet50-torch-eager-fp16-b1 rep6: lat=8.293ms p95=10.916 power=42.52702290076337 J/inf=0.3526637083706335
+[ok] resnet50-torch-eager-fp16-b1 rep7: lat=8.342ms p95=10.958 power=42.476259541984746 J/inf=0.35434800620899903
+[ok] resnet50-torch-eager-fp16-b1 rep8: lat=8.296ms p95=10.844 power=42.48015384615385 J/inf=0.3524089757562323
+

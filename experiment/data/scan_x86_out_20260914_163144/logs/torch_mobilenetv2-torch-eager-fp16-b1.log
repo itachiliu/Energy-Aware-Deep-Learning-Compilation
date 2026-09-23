@@ -1,0 +1,12 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_scan.py --torch-name mobilenetv2 --dtype fp16 --batch 1 --tag mobilenetv2-torch-eager-fp16-b1 --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260914_163144/results_scan.csv
+[ok] mobilenetv2-torch-eager-fp16-b1 rep1: lat=5.066ms p95=5.414 power=71.31893333333333 J/inf=0.3612968351128553
+[ok] mobilenetv2-torch-eager-fp16-b1 rep2: lat=5.058ms p95=5.356 power=71.14861111111111 J/inf=0.3598769934412629
+[ok] mobilenetv2-torch-eager-fp16-b1 rep3: lat=5.005ms p95=5.204 power=70.92541666666666 J/inf=0.35501126390840465
+[ok] mobilenetv2-torch-eager-fp16-b1 rep4: lat=5.014ms p95=5.241 power=70.6445205479452 J/inf=0.3541794425008249
+[ok] mobilenetv2-torch-eager-fp16-b1 rep5: lat=5.043ms p95=5.314 power=70.59338028169014 J/inf=0.35600159915438645
+[ok] mobilenetv2-torch-eager-fp16-b1 rep6: lat=5.072ms p95=5.332 power=70.42402777777778 J/inf=0.3572003018655324
+[ok] mobilenetv2-torch-eager-fp16-b1 rep7: lat=5.039ms p95=5.270 power=70.23805555555556 J/inf=0.3539352408413504
+[ok] mobilenetv2-torch-eager-fp16-b1 rep8: lat=5.013ms p95=5.236 power=70.41042253521127 J/inf=0.35297579399892787
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+

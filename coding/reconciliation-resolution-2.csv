@@ -1,0 +1,97 @@
+sample_id,field,coder_A,coder_B,agreed,rule,note
+S09,category,建模,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,核心是多目标软硬件设计空间权衡而不是单一代价模型
+S102,category,功耗,异构,功耗,coding-rubric-v2 §3 类别裁决表,DynamoLLM 是能耗管理框架；异构性是场景条件
+S118,category,建模,测量,测量,coding-rubric-v2 §3 类别裁决表,ACT 属碳排放和能耗核算方法；按测量处理
+S120,category,Pareto,功耗,功耗,coding-rubric-v2 §3 类别裁决表,Clover 核心是碳感知能耗调度；按功耗状态/能源管理归类
+S17,category,图层,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,HAQ 的核心是精度选择中的精度-资源权衡
+S18,category,图层,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,混合精度量化以精度和效率权衡为核心
+S19,category,图层,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,核心是张量分解/内存优化中的多目标权衡
+S21,category,循环层,建模,建模,coding-rubric-v2 §3 类别裁决表,Interstellar 用调度语言分析加速器映射；贡献偏建模分析
+S22,category,异构,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,多 DNN 数据流加速器的核心是吞吐/能耗等设计权衡
+S25,category,循环层,AI4C,AI4C,coding-rubric-v2 §3 类别裁决表,使用学习/搜索方法优化 Halide 调度；按 AI4C
+S29,category,异构,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,ODiMO 进行延迟和能耗平衡；按多目标权衡
+S32,category,异构,TinyML,异构,coding-rubric-v2 §3 类别裁决表,NEST-C 是面向异构计算系统和 AI 加速器的编译框架
+S35,category,建模,功耗,建模,coding-rubric-v2 §3 类别裁决表,论文核心是 DVFS-aware 延迟建模与性能分析
+S44,category,循环层,AI4C,循环层,coding-rubric-v2 §3 类别裁决表,PolyMorphous 是 MLIR/polyhedral 循环变换编译器；未体现 LLM/学习决策
+S46,category,AI4C,循环层,AI4C,coding-rubric-v2 §3 类别裁决表,MLComp 以机器学习辅助编译优化序列选择为核心
+S56,category,循环层,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,CoSA 面向加速器映射空间的多目标优化
+S57,category,循环层,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,Mind Mappings 核心是映射空间搜索和 Pareto 权衡
+S58,category,异构,建模,建模,coding-rubric-v2 §3 类别裁决表,Stream 主要贡献是层融合数据流加速器建模/DSE框架
+S59,category,建模,测量,测量,coding-rubric-v2 §3 类别裁决表,TenSet 是张量程序性能数据集和评测资源
+S60,category,建模,AI4C,建模,coding-rubric-v2 §3 类别裁决表,TLP 的独立贡献是深度学习型代价模型
+S64,category,图层,循环层,循环层,coding-rubric-v2 §3 类别裁决表,NeoCPU 的优化对象是 CPU 上的算子和 kernel
+S68,category,循环层,AI4C,AI4C,coding-rubric-v2 §3 类别裁决表,Chameleon 使用自适应采样和强化学习加速代码优化
+S90,category,TinyML,Pareto,Pareto,coding-rubric-v2 §3 类别裁决表,Memory-driven mixed precision 的核心是精度-内存-效率权衡
+S91,category,TinyML,稀疏,稀疏,coding-rubric-v2 §3 类别裁决表,SpArSe 的核心贡献是稀疏结构/稀疏架构搜索
+S01,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,能耗估计对象是 DNN/layer 组成的计算图层级
+S102,granularity,Power,Placement,Power,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,DynamoLLM 包含 GPU frequency 等功耗状态配置；按 Power
+S103,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,IR2Vec 是 IR 表征基础设施；不直接落在图/循环/放置/功耗四类决策
+S106,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,COMPASS 生成 MLIR pass pipeline；作用于代码/编译优化层
+S108,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,LLM 用于发现编译器代码优化机会；按代码变换的 Loop/Op 处理
+S120,granularity,Graph,Power,Power,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,Clover 的关键决策是碳/功耗相关调度状态
+S29,granularity,Placement,Graph,Placement,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,ODiMO 在多加速器间进行细粒度映射
+S32,granularity,Placement,Graph,Placement,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,NEST-C 的核心是异构处理单元上的算子调度/放置
+S41,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,AutoPhase 选择编译优化阶段；按代码/循环级优化处理
+S42,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,LLM Compiler 面向 IR/代码优化；按 Loop/Op
+S43,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,Compiler-R1 面向编译 pass/code 生成决策；按 Loop/Op
+S45,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,LLM 生成节能代码；决策对象是代码/算子层
+S46,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,MLComp 选择编译优化序列；按 Loop/Op
+S52,granularity,Loop/Op,Graph,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,NeuralPower 是 layer-wise 预测框架；层/算子级为主
+S53,granularity,Loop/Op,Graph,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,SyNERGY 进行层级能耗测量和预测；按 Loop/Op
+S58,granularity,Placement,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,Stream 的细粒度层融合/映射主要作用于层和算子调度
+S64,granularity,Graph,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,CPU CNN 优化集中在算子和 kernel
+S74,granularity,Loop/Op,Other,Other,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,Format Abstraction 是稀疏格式表示基础设施；不直接作四类决策
+S76,granularity,Loop/Op,Other,Other,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,MLIR 稀疏张量支持是 lowering/表示基础设施
+S77,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,Sparse Abstract Machine 面向稀疏张量算子执行抽象
+S78,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,Sparse GPU kernels 的作用对象是 GPU kernel/算子
+S79,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,N:M 稀疏决定模型结构/权重模式；按图/模型层
+S80,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,结构化稀疏/通道级处理属于模型图层面的结构决策
+S81,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,SparseGPT 对模型权重/层进行剪枝；按 Graph
+S82,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,MCUNet 是模型架构/NAS 层面的设计
+S85,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,PULP-NN 是低层 kernel/算子库
+S86,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,CMix-NN 主要是 MCU/ISA 相关 kernel 实现
+S89,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,MicroNets 通过 NAS 设计模型架构
+S91,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,SpArSe 是稀疏架构搜索；对象为模型图/结构
+S92,granularity,Other,Graph,Graph,coding-rubric-v2 §2 粒度定义 / §1 粒度 Other 判据,差分化模型设计/搜索作用于模型结构
+S102,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,DynamoLLM 在实例数/并行度/频率配置空间中自动重配置
+S106,mechanism,Agentic,Learned,Agentic,coding-rubric-v2 §1-§2 + v3 M1/M2,COMPASS 是 agent 生成 MLIR pass pipeline；按 Agentic
+S118,mechanism,Analytical,Other,Other,coding-rubric-v2 §1-§2 + v3 M1/M2,ACT 属测量/核算工具；不提出四类编译决策机制
+S15,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,AStitch 在 operator-stitching 优化空间中搜索
+S18,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,QuantuneV2 自动选择混合精度配置；按搜索式调优
+S19,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,TeMCO 执行自动编译优化/配置选择；搜索框架优先
+S30,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,Band 自动协调多 DNN 在异构移动处理器上的调度
+S32,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,NEST-C 包含异构算子调度/编排；按自动搜索/调度
+S35,mechanism,Analytical,Learned,Analytical,coding-rubric-v2 §1-§2 + v3 M1/M2,DVFS-aware 工作提出显式延迟模型和分析；非学习模型为主
+S36,mechanism,Learned,AutoSearch,Learned,coding-rubric-v2 §1-§2 + v3 M1/M2,DVFO 标明 learning-based DVFS；学习策略驱动频率/卸载决策
+S39,mechanism,Analytical,AutoSearch,Analytical,coding-rubric-v2 §1-§2 + v3 M1/M2,ReGate 基于 ISA/规则化 best-fit power-gating 决策；未见独立搜索框架
+S40,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,EATSS 使用 Z3/整数约束求 tile size；属求解搜索
+S44,mechanism,Other,Agentic,Other,coding-rubric-v2 §1-§2 + v3 M1/M2,PolyMorphous 是 MLIR polyhedral 循环变换基础设施；非 LLM/agent
+S46,mechanism,AutoSearch,Analytical,Learned,coding-rubric-v2 §1-§2 + v3 M1/M2,MLComp 的独立贡献包含机器学习型性能估计；A/B 均未完全覆盖
+S53,mechanism,Learned,Analytical,Learned,coding-rubric-v2 §1-§2 + v3 M1/M2,SyNERGY 的预测框架基于测量数据拟合；按学习型模型
+S58,mechanism,AutoSearch,Analytical,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,Stream 是 layer-fused accelerator 的 DSE/映射搜索框架
+S59,mechanism,Learned,Other,Other,coding-rubric-v2 §1-§2 + v3 M1/M2,TenSet 是数据集/基准资源；不提出决策机制
+S61,mechanism,Analytical,AutoSearch,Analytical,coding-rubric-v2 §1-§2 + v3 M1/M2,DNNFusion 主要用规则化 operator 分类和融合判定；非独立搜索框架
+S64,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,NeoCPU 包含系统化自动调优/优化选择
+S66,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,Capuchin 在重计算/换出策略间自动选择；按搜索/调度
+S68,mechanism,AutoSearch,Learned,Learned,coding-rubric-v2 §1-§2 + v3 M1/M2,Chameleon 使用自适应采样和强化学习驱动代码优化
+S70,mechanism,AutoSearch,Other,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,TensorIR 构建自动调度算法；不只是表示层
+S75,mechanism,AutoSearch,Other,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,SparseTIR 构造可调优搜索空间；按 AutoSearch
+S79,mechanism,Other,Learned,Learned,coding-rubric-v2 §1-§2 + v3 M1/M2,N:M 结构化稀疏通过学习/训练过程获得稀疏模型
+S80,mechanism,AutoSearch,Learned,Learned,coding-rubric-v2 §1-§2 + v3 M1/M2,结构化稀疏/通道选择由学习过程驱动；按 Learned
+S81,mechanism,Other,Analytical,Analytical,coding-rubric-v2 §1-§2 + v3 M1/M2,SparseGPT 使用 Hessian/近似二阶规则进行剪枝判定
+S84,mechanism,AutoSearch,Analytical,Analytical,coding-rubric-v2 §1-§2 + v3 M1/M2,On-device training 以算法-系统规则和内存估计为主
+S88,mechanism,AutoSearch,Analytical,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,DORY 自动进行部署和 tiling/内存配置选择
+S89,mechanism,AutoSearch,Other,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,MicroNets 使用 differentiable NAS 搜索 MCU 模型
+S90,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §1-§2 + v3 M1/M2,Memory-driven mixed precision 自动搜索/选择精度配置
+S01,object_type,专用加速器与体系结构,测量与基准设施,测量与基准设施,coding-rubric-v3 一、对象类型,研究对象是 DNN 能耗估计方法；按测量/建模设施处理
+S02,object_type,专用加速器与体系结构,测量与基准设施,测量与基准设施,coding-rubric-v3 一、对象类型,核心是 Edge TPU 能耗/访存刻画；按测量研究处理
+S18,object_type,通用编译栈,负载与模型层,负载与模型层,coding-rubric-v3 一、对象类型,混合精度量化属于模型压缩方法
+S19,object_type,通用编译栈,负载与模型层,通用编译栈,coding-rubric-v3 一、对象类型,TeMCO 是 compiler optimization across tensor decompositions；方法依附于编译优化
+S35,object_type,测量与基准设施,通用编译栈,专用加速器与体系结构,coding-rubric-v3 一、对象类型,DVFS-aware GPU inference modeling 依附于 GPU/DVFS 体系结构；A/B 均非最佳
+S37,object_type,通用编译栈,专用加速器与体系结构,专用加速器与体系结构,coding-rubric-v3 一、对象类型,PowerLens 是 DVFS/功耗控制框架；对象是硬件功耗状态
+S77,object_type,专用加速器与体系结构,通用编译栈,通用编译栈,coding-rubric-v3 一、对象类型,Sparse Abstract Machine 服务于稀疏张量编译抽象
+S86,object_type,通用编译栈,专用加速器与体系结构,专用加速器与体系结构,coding-rubric-v3 一、对象类型,CMix-NN 面向特定 MCU/PULP 类平台 kernel 支持
+S93,object_type,通用编译栈,负载与模型层,负载与模型层,coding-rubric-v3 一、对象类型,Buffer reduction 面向移动/嵌入式 CNN 负载部署
+S95,object_type,测量与基准设施,通用编译栈,通用编译栈,coding-rubric-v3 一、对象类型,Prediction-based power oversubscription 是云平台运行时功耗管理
+S97,object_type,测量与基准设施,专用加速器与体系结构,专用加速器与体系结构,coding-rubric-v3 一、对象类型,GPGPU 多电压域功耗模型依附于 GPU 体系结构
+S98,object_type,测量与基准设施,专用加速器与体系结构,专用加速器与体系结构,coding-rubric-v3 一、对象类型,AccelWattch 是 GPU 架构级功耗建模框架

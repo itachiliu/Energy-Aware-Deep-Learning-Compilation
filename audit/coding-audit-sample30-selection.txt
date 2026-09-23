@@ -1,0 +1,4 @@
+seed = 20260909
+N = 30
+stratified by the ten categories
+ids: S06, S07, S104, S105, S109, S112, S115, S118, S18, S19, S23, S26, S32, S33, S35, S45, S48, S49, S55, S65, S71, S76, S77, S78, S82, S86, S93, S94, S96, S97

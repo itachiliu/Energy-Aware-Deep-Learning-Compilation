@@ -1,0 +1,36 @@
+== category : 32 disagreements of 121
+   A=建模           B=Pareto       n=5   S09 S55 S56 S57 S58
+   A=Pareto       B=测量           n=4   S117 S118 S119 S121
+   A=Pareto       B=功耗           n=3   S120 S47 S48
+   A=建模           B=测量           n=2   S02 S10
+   A=建模           B=循环层          n=2   S06 S07
+   A=图层           B=Pareto       n=2   S17 S18
+   A=建模           B=AI4C         n=2   S59 S60
+   A=建模           B=稀疏           n=1   S05
+
+== boundary : 55 disagreements of 121
+   A=桥接           B=核心           n=26  S06 S07 S08 S116 S13 S14 S15 S16 S23 S24 S30 S47
+   A=核心           B=桥接           n=14  S109 S111 S113 S115 S117 S118 S21 S40 S46 S72 S73 S74
+   A=核心           B=前沿           n=10  S10 S100 S101 S121 S32 S35 S37 S39 S54 S58
+   A=桥接           B=前沿           n=3   S11 S44 S45
+   A=前沿           B=核心           n=2   S120 S84
+
+== granularity : 48 disagreements of 121
+   A=Other        B=Loop/Op      n=14  S105 S107 S43 S44 S59 S73 S74 S75 S76 S77 S78 S85
+   A=Other        B=Graph        n=11  S79 S80 S81 S82 S83 S84 S89 S90 S91 S92 S93
+   A=Loop/Op      B=Graph        n=6   S01 S08 S52 S53 S54 S58
+   A=Other        B=Power        n=6   S113 S114 S116 S120 S47 S48
+   A=Loop/Op      B=Other        n=4   S03 S09 S11 S22
+   A=Power        B=Loop/Op      n=2   S40 S99
+   A=Power        B=Placement    n=1   S101
+   A=Placement    B=Graph        n=1   S29
+
+== mechanism : 68 disagreements of 121
+   A=Other        B=AutoSearch   n=23  S101 S102 S120 S15 S16 S24 S27 S30 S31 S47 S48 S49
+   A=Other        B=Analytical   n=22  S117 S118 S119 S14 S18 S19 S22 S23 S26 S39 S44 S64
+   A=Other        B=Learned      n=9   S103 S104 S105 S37 S41 S46 S50 S59 S79
+   A=Other        B=Agentic      n=6   S106 S107 S108 S42 S43 S45
+   A=Analytical   B=AutoSearch   n=4   S09 S12 S55 S58
+   A=Learned      B=AutoSearch   n=2   S06 S07
+   A=AutoSearch   B=Learned      n=1   S36
+   A=Learned      B=Analytical   n=1   S53

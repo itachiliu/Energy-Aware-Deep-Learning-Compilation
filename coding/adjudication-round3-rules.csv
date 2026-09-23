@@ -1,0 +1,13 @@
+﻿rule_id,field,question,option_1,value_1,option_2,value_2,cells,rubric_clause,coder_A_rule,coder_B_rule,adopted
+R1,category,逐层位宽指派、混合精度与张量分解内存优化类工作，归入哪一类？,图层：精度指派属图级重写,图层,Pareto：核心是精度与效率的多目标权衡,Pareto,S17 S18 S19,§3 类别裁决表：图层 vs Pareto,,,
+R2,category,面向多加速器映射/层切分的设计空间探索，归入哪一类？,异构：决策是层到加速器的分配,异构,Pareto：核心是吞吐/能耗等多目标权衡,Pareto,S22 S29,§3 类别裁决表：异构 vs Pareto,,,
+R3,category,以学习/搜索模块服务张量调度的工作，是否因学习组件改记 AI4C？,循环层：学习组件不改类别，主体是调度搜索,循环层,AI4C：主体是学习型编译方法,AI4C,S25 S68,§3：循环层 vs AI4C（现无对应行，需新增）,,,
+R4,category,把映射与调度写成约束优化并求解的工作，归入哪一类？,循环层：贡献是映射/调度的求解,循环层,Pareto：贡献是前沿遍历与权衡,Pareto,S56 S57,§3 类别裁决表：循环层 vs Pareto,,,
+R5,granularity,作用于编译器 pass 序列、IR 或源码级改写的决策，其粒度记什么？,Other：pass 与 IR 级决策不落四类粒度,Other,Loop/Op：按代码/算子层变换计,Loop/Op,S41 S42 S43 S45 S46 S78 S85 S86 S106 S108,§2 粒度定义 / §1 粒度 Other 判据,,,
+R6,granularity,对象是权重、通道结构、完整网络架构或训练过程的工作，其粒度记什么？,Other：对象不是编译产物，不属四类粒度,Other,Graph：模型图/结构决策即图级,Graph,S79 S80 S81 S82 S89 S91 S92,§2 粒度定义 / §1 粒度 Other 判据,,,
+R7,granularity,稀疏格式与稀疏表示基础设施（生成单算子迭代代码），其粒度记什么？,Loop/Op：产出单算子迭代代码,Loop/Op,Other：表示基础设施本身不作决策,Other,S74 S76,§2 粒度定义（稀疏编译基础设施）,,,
+R8,mechanism,以解析模型或规则驱动、一次性定位或启发式编排的方法，机制记什么？,Analytical：白盒模型/规则直接给出决策,Analytical,AutoSearch：只要存在候选空间与评估即记搜索,AutoSearch,S15 S18 S19 S30 S32 S64 S66 S90 S102,§1-§2 + v3 M1（M1 需补“以是否在候选空间中迭代评估为准”）,,,
+R9,mechanism,搜索框架内部的学习模块，其机制记什么？,AutoSearch：学习模块服务于搜索框架,AutoSearch,Learned：贡献本身是可复用的学习型模型/策略,Learned,S46 S68 S80,§1-§2 + v3 M1/M2,,,
+R10,object_type,架构级功耗/能耗模型（GPU 功耗模型、DVFS 延迟模型），依附对象记什么？,测量与基准设施：产出是可迁移的建模方法,测量与基准设施,专用加速器与体系结构：模型依附特定架构,专用加速器与体系结构,S35 S97 S98,v3 一、对象类型,,,
+R11,object_type,以编译器 pass 实现、但决策对象偏模型层的方法，对象类型记什么？,通用编译栈：方法学贡献依附编译栈,通用编译栈,负载与模型层：决策对象是模型/负载,负载与模型层,S18 S93,v3 一、对象类型,,,
+R12,object_type,面向特定平台的生产级 kernel 库或运行时框架，对象类型记什么？,通用编译栈：面向商用 ISA 的生产级实现,通用编译栈,专用加速器与体系结构：绑定定制 ISA/硬件,专用加速器与体系结构,S37 S86,v3 一、对象类型（现无手工 kernel 库桶，需新增）,,,

@@ -1,0 +1,18 @@
+% 附录/正文可直接引用的 4x4 计数表（LaTeX 片段）
+\begin{table}[t]
+  \centering
+  \caption{附录 A 统计样本在“优化粒度 $\times$ 决策机制”矩阵上的计数（两位编码者
+    独立编码后按复议结果归并；空格按正文代表口径修正）。}
+  \label{tab:matrix-counts}
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+    粒度单元 & Analytical & Learned & AutoSearch & Agentic \\
+    \midrule
+    计算图（Graph）   & 6 & 3 & 11 & 0 \\
+    循环/算子（Loop/Op） & 4 & 4 & 19 & 1 \\
+    异构放置（Placement） & 2 & 3 & 5 & 0 \\
+    功耗状态（Power） & 4 & 3 & 3 & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

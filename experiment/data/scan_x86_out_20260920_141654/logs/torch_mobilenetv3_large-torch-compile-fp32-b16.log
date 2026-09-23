@@ -1,0 +1,19 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_compile.py --torch-name mobilenetv3_large --dtype fp32 --batch 16 --tag mobilenetv3_large-torch-compile-fp32-b16 --compile-mode default --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260920_141654/results_scan.csv
+[compile] mobilenetv3_large-torch-compile-fp32-b16: inductor compile 75.8s (mode=default)
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep1: lat=3.290ms p95=3.562 power=105.05706666666666 J/inf=0.3456583212271203
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep2: lat=3.170ms p95=3.391 power=107.03135135135135 J/inf=0.33931756160377474
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep3: lat=3.154ms p95=3.327 power=108.14208333333333 J/inf=0.34110422800433704
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep4: lat=3.175ms p95=3.424 power=107.90246575342466 J/inf=0.34253934237029465
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep5: lat=3.145ms p95=3.314 power=107.00351351351351 J/inf=0.33654806095045287
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep6: lat=3.169ms p95=3.385 power=107.62028571428571 J/inf=0.3410379343362671
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep7: lat=3.233ms p95=3.501 power=106.98837837837839 J/inf=0.34588704660581193
+[ok] mobilenetv3_large-torch-compile-fp32-b16 rep8: lat=3.185ms p95=3.414 power=106.75657142857143 J/inf=0.34006528567557115
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/_inductor/compile_fx.py:194: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+Exception ignored in: <_io.BufferedWriter name=45>
+BrokenPipeError: [Errno 32] Broken pipe
+

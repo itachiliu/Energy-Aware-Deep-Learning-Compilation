@@ -1,0 +1,15 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_compile.py --torch-name vit_b_16 --dtype fp32 --batch 1 --tag vit_b_16-torch-compile-fp32-b1 --compile-mode default --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260914_163144/results_scan.csv
+[compile] vit_b_16-torch-compile-fp32-b1: inductor compile 11.7s (mode=default)
+[ok] vit_b_16-torch-compile-fp32-b1 rep1: lat=3.695ms p95=3.865 power=272.1660273972603 J/inf=1.0055886564006362
+[ok] vit_b_16-torch-compile-fp32-b1 rep2: lat=3.686ms p95=3.870 power=285.32957746478877 J/inf=1.051714032394474
+[ok] vit_b_16-torch-compile-fp32-b1 rep3: lat=3.709ms p95=3.955 power=288.1588888888889 J/inf=1.0687103083062717
+[ok] vit_b_16-torch-compile-fp32-b1 rep4: lat=3.710ms p95=3.977 power=287.2865277777778 J/inf=1.065943332497103
+[ok] vit_b_16-torch-compile-fp32-b1 rep5: lat=3.690ms p95=3.853 power=289.7189189189189 J/inf=1.0689612322918929
+[ok] vit_b_16-torch-compile-fp32-b1 rep6: lat=3.714ms p95=3.949 power=288.1664383561644 J/inf=1.070210389639587
+[ok] vit_b_16-torch-compile-fp32-b1 rep7: lat=3.700ms p95=3.897 power=288.56458333333336 J/inf=1.0677369189924462
+[ok] vit_b_16-torch-compile-fp32-b1 rep8: lat=3.724ms p95=3.981 power=288.73972602739724 J/inf=1.0752321127870839
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+

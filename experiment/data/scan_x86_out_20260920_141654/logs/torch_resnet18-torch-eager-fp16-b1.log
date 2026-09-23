@@ -1,0 +1,12 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_scan.py --torch-name resnet18 --dtype fp16 --batch 1 --tag resnet18-torch-eager-fp16-b1 --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260920_141654/results_scan.csv
+[ok] resnet18-torch-eager-fp16-b1 rep1: lat=2.368ms p95=2.504 power=77.78093333333332 J/inf=0.18420937725682107
+[ok] resnet18-torch-eager-fp16-b1 rep2: lat=2.451ms p95=2.632 power=76.94013157894737 J/inf=0.18854581355177139
+[ok] resnet18-torch-eager-fp16-b1 rep3: lat=2.408ms p95=2.592 power=77.08214285714286 J/inf=0.18563097327761596
+[ok] resnet18-torch-eager-fp16-b1 rep4: lat=2.407ms p95=2.577 power=76.72797297297298 J/inf=0.18469695005842762
+[ok] resnet18-torch-eager-fp16-b1 rep5: lat=2.444ms p95=2.614 power=76.73597222222222 J/inf=0.18758079043927364
+[ok] resnet18-torch-eager-fp16-b1 rep6: lat=2.448ms p95=2.620 power=77.25857142857143 J/inf=0.1891354299070368
+[ok] resnet18-torch-eager-fp16-b1 rep7: lat=2.385ms p95=2.527 power=77.23349206349206 J/inf=0.18419164494780205
+[ok] resnet18-torch-eager-fp16-b1 rep8: lat=2.431ms p95=2.612 power=77.22216216216216 J/inf=0.1877336407725202
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+

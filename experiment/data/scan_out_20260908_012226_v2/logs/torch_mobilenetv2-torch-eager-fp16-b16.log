@@ -1,0 +1,10 @@
+$ /home/bingxing2/home/scx7es6/.conda/envs/cp310cu122/bin/python /home/bingxing2/home/scx7es6/job/measure_torch_scan.py --torch-name mobilenetv2 --dtype fp16 --batch 16 --tag mobilenetv2-torch-eager-fp16-b16 --reps 8 --duration-s 20.0 --out /home/bingxing2/home/scx7es6/scan_out_20260908_012226/results_scan.csv
+[ok] mobilenetv2-torch-eager-fp16-b16 rep1: lat=7.468ms p95=7.949 power=61.42545454545453 J/inf=0.458726336901317
+[ok] mobilenetv2-torch-eager-fp16-b16 rep2: lat=7.490ms p95=7.892 power=61.06015151515154 J/inf=0.45733635017519075
+[ok] mobilenetv2-torch-eager-fp16-b16 rep3: lat=7.462ms p95=7.621 power=61.387500000000045 J/inf=0.45808678237023953
+[ok] mobilenetv2-torch-eager-fp16-b16 rep4: lat=7.457ms p95=7.569 power=61.697669172932365 J/inf=0.4600499570835612
+[ok] mobilenetv2-torch-eager-fp16-b16 rep5: lat=7.471ms p95=7.556 power=61.505187969924826 J/inf=0.4595231737077941
+[ok] mobilenetv2-torch-eager-fp16-b16 rep6: lat=7.476ms p95=7.624 power=61.2309022556391 J/inf=0.4577612985706843
+[ok] mobilenetv2-torch-eager-fp16-b16 rep7: lat=7.555ms p95=8.534 power=60.33151515151516 J/inf=0.4557968591886325
+[ok] mobilenetv2-torch-eager-fp16-b16 rep8: lat=7.590ms p95=7.689 power=60.003816793893144 J/inf=0.45541173145741176
+

@@ -1,0 +1,17 @@
+$ /data/home/scxm177/run/dlxvenv/bin/python /data/run01/scxm177/job/measure_torch_compile.py --torch-name resnet18 --dtype fp16 --batch 1 --tag resnet18-torch-compile-fp16-b1 --compile-mode default --reps 8 --duration-s 20.0 --out /data/run01/scxm177/scan_x86_out_20260920_141654/results_scan.csv
+[compile] resnet18-torch-compile-fp16-b1: inductor compile 38.1s (mode=default)
+[ok] resnet18-torch-compile-fp16-b1 rep1: lat=1.311ms p95=1.436 power=77.2096052631579 J/inf=0.10123062318959765
+[ok] resnet18-torch-compile-fp16-b1 rep2: lat=1.279ms p95=1.400 power=77.5972 J/inf=0.09923082556299073
+[ok] resnet18-torch-compile-fp16-b1 rep3: lat=1.286ms p95=1.397 power=77.75533333333333 J/inf=0.10001384062193533
+[ok] resnet18-torch-compile-fp16-b1 rep4: lat=1.281ms p95=1.396 power=77.76662162162161 J/inf=0.0996268929651991
+[ok] resnet18-torch-compile-fp16-b1 rep5: lat=1.274ms p95=1.399 power=77.83094594594594 J/inf=0.09918889236808857
+[ok] resnet18-torch-compile-fp16-b1 rep6: lat=1.276ms p95=1.399 power=77.4368 J/inf=0.09879767579159544
+[ok] resnet18-torch-compile-fp16-b1 rep7: lat=1.278ms p95=1.395 power=77.47773333333333 J/inf=0.09899347756434321
+[ok] resnet18-torch-compile-fp16-b1 rep8: lat=1.290ms p95=1.401 power=77.90818181818182 J/inf=0.10048251572072259
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/data/home/scxm177/run/dlxvenv/lib/python3.13/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Exception ignored in: <_io.BufferedWriter name=45>
+BrokenPipeError: [Errno 32] Broken pipe
+

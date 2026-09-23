@@ -1,0 +1,97 @@
+sample_id,field,coder_A,coder_B,agreed,rule,note
+S09,category,建模,Pareto,Pareto,coding-rubric-v2 §3,两裁决一致；贡献是多目标软硬件DSE而非可复用代价模型
+S102,category,功耗,异构,功耗,coding-rubric-v2 §3,两裁决一致；异构为场景条件不构成类别
+S118,category,建模,测量,建模,coding-rubric-v2 §3,采A：§3"提出模型或估计器→建模"；v3 M2已把同类的LLMCarbon记Analytical。对象类型另记测量与基准设施 两维度无需同向
+S120,category,Pareto,功耗,Pareto,coding-rubric-v2 §3,采A：§3的功耗以DVFS/功率上限编排为要件 Clover的决策是模型变体与GPU分区 不满足
+S17,category,图层,Pareto,图层,coding-rubric-v2 §3,采A 依R1：约束下的单目标位宽指派 非前沿遍历
+S18,category,图层,Pareto,图层,coding-rubric-v2 §3,采A 依R1
+S19,category,图层,Pareto,图层,coding-rubric-v2 §3,采A 依R1
+S21,category,循环层,建模,建模,coding-rubric-v2 §3,采B：与S04/S20/S55同属加速器映射与能耗分析框架谱系
+S22,category,异构,Pareto,异构,coding-rubric-v2 §3,采A 依R1：评估中出现权衡曲线不构成Pareto类
+S25,category,循环层,AI4C,循环层,coding-rubric-v2 §3,采A 依R5：张量程序调度含学习组件仍记循环层
+S29,category,异构,Pareto,异构,coding-rubric-v2 §3,采A 依R1
+S32,category,异构,TinyML,异构,coding-rubric-v2 §3,两裁决一致
+S35,category,建模,功耗,建模,coding-rubric-v2 §3,两裁决一致
+S44,category,循环层,AI4C,循环层,coding-rubric-v2 §3,两裁决一致；B列疑为整行错位 建议单独向B核对
+S46,category,AI4C,循环层,AI4C,coding-rubric-v2 §3,两裁决一致 依R5：对象是通用编译器pass序列
+S56,category,循环层,Pareto,循环层,coding-rubric-v2 §3,采A 依R1：约束优化求解非前沿构造
+S57,category,循环层,Pareto,循环层,coding-rubric-v2 §3,采A 依R1
+S58,category,异构,建模,建模,coding-rubric-v2 §3,采B：与S21同谱系 ZigZag系后继
+S59,category,建模,测量,测量,coding-rubric-v2 §3,两裁决一致
+S60,category,建模,AI4C,建模,coding-rubric-v2 §3,两裁决一致 依R5的反面：独立贡献即代价模型
+S64,category,图层,循环层,循环层,coding-rubric-v2 §3,采B：以算子模板调优为主线 与其粒度和机制一并改判
+S68,category,循环层,AI4C,循环层,coding-rubric-v2 §3,采A 依R5
+S90,category,TinyML,Pareto,TinyML,coding-rubric-v2 §3,采A 依R1
+S91,category,TinyML,稀疏,TinyML,coding-rubric-v2 §3,采A：§3的稀疏要件是"稀疏性的编译支持" SpArSe不提供
+S01,granularity,Other,Graph,Loop/Op,coding-rubric-v2 §2/§1,采第三值：与S52 S53同为逐层能耗估计器 原A的Other与本表自身不自洽
+S102,granularity,Power,Placement,Power,coding-rubric-v2 §2/§1,两裁决一致；缺口R7：含频率与实例并行两类决策 规则无主决策判据
+S103,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,两裁决一致：IR表征基础设施
+S106,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2缺口：pass级决策不落四类粒度 待增设IR/Pass后全组改判
+S108,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2
+S120,granularity,Graph,Power,Graph,coding-rubric-v2 §2/§1,采A：§2列有图级精度指派；缺口R6 该指派发生在服务期而非编译期
+S29,granularity,Placement,Graph,Placement,coding-rubric-v2 §2/§1,两裁决一致
+S32,granularity,Placement,Graph,Placement,coding-rubric-v2 §2/§1,两裁决一致
+S41,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2
+S42,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2
+S43,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2
+S45,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2：源码级改写非循环嵌套
+S46,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A 依R2
+S52,granularity,Loop/Op,Graph,Loop/Op,coding-rubric-v2 §2/§1,两裁决一致：预测单元是层
+S53,granularity,Loop/Op,Graph,Loop/Op,coding-rubric-v2 §2/§1,两裁决一致
+S58,granularity,Placement,Loop/Op,Placement,coding-rubric-v2 §2/§1,采A：相对ZigZag的增量是核间分配 满足§2位置决策要件；同R7缺口
+S64,granularity,Graph,Loop/Op,Loop/Op,coding-rubric-v2 §2/§1,采B 与类别改判一致
+S74,granularity,Loop/Op,Other,Loop/Op,coding-rubric-v2 §2/§1,采A 依R4：生成单算子迭代代码的编译基础设施
+S76,granularity,Loop/Op,Other,Loop/Op,coding-rubric-v2 §2/§1,采A 依R4
+S77,granularity,Other,Loop/Op,Loop/Op,coding-rubric-v2 §2/§1,采B 依R4统一口径 推翻A
+S78,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A：§2误判栏明列手写kernel库不得记Loop/Op
+S79,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3：对象是权重与训练过程；模型层信号已由object_type承载
+S80,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3
+S81,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3
+S82,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3：NAS决定建哪张图 非对既有图做变换
+S85,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A：§2误判栏手写kernel库
+S86,granularity,Other,Loop/Op,Other,coding-rubric-v2 §2/§1,采A：同S85
+S89,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3
+S91,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3
+S92,granularity,Other,Graph,Other,coding-rubric-v2 §2/§1,采A 依R3
+S102,mechanism,Analytical,AutoSearch,AutoSearch,v3 M1,采B：分层控制器在实例数/并行度/频率配置空间中重配置 M1框架优先
+S106,mechanism,Agentic,Learned,Agentic,v3 M1/M2,两裁决一致
+S118,mechanism,Analytical,Other,Analytical,v3 M2,采A：M2例表已把同类的LLMCarbon与AccelWattch记Analytical ACT为解析式碳排模型
+S15,mechanism,Analytical,AutoSearch,AutoSearch,v3 M1,采B 推翻A：M1字面含"调度框架" AStitch有融合决策空间
+S18,mechanism,Analytical,AutoSearch,Analytical,v3 M1,2026-09-21 作者复核确认落回 Analytical（原"待核原文其局部度量是否真替代了搜索"已核：局部度量一次定位敏感层，未在候选空间中迭代评估）
+S19,mechanism,Analytical,AutoSearch,Analytical,v3 M1,2026-09-21 作者复核确认落回 Analytical（原"待核原文"已核：规则化融合判定，无候选空间）
+S30,mechanism,Analytical,AutoSearch,AutoSearch,v3 M1,采B 推翻A：运行时调度框架
+S32,mechanism,Analytical,AutoSearch,AutoSearch,v3 M1,采B 推翻A：划分与调度框架
+S35,mechanism,Analytical,Learned,Analytical,coding-rubric-v2 §2,两裁决一致 依R8：硬件行为推导的白盒公式记Analytical
+S36,mechanism,Learned,AutoSearch,Learned,coding-rubric-v2 §1,两裁决一致 依R9：RL策略直接输出运行时决策
+S39,mechanism,Analytical,AutoSearch,Analytical,v3 M1,两裁决一致：编译期规则化门控判定 无候选空间
+S40,mechanism,Analytical,AutoSearch,AutoSearch,coding-rubric-v2 §2,两裁决一致：Z3求解属§2所列ILP同类 推翻A
+S44,mechanism,Other,Agentic,Other,v3 M2,两裁决一致：纯表示与循环变换原语
+S46,mechanism,AutoSearch,Analytical,Learned,v3 M1,采第三值 从对方裁决：M1的例外条款成立 ML性能估计器是其标题级独立贡献
+S53,mechanism,Learned,Analytical,Learned,coding-rubric-v2 §2,两裁决一致 依R8：测量数据回归的黑盒预测器
+S58,mechanism,AutoSearch,Analytical,AutoSearch,v3 M1,两裁决一致：M1例表已列ZigZag为AutoSearch
+S59,mechanism,Learned,Other,Other,coding-rubric-v2 §1,采B 推翻A：与S109 MLPerf同为基准资源 保持谱系一致
+S61,mechanism,Analytical,AutoSearch,Analytical,v3 M1,两裁决一致：算子映射类型规则库一次判定
+S64,mechanism,Analytical,AutoSearch,AutoSearch,v3 M1,采B 推翻A 与类别粒度改判一致
+S66,mechanism,Analytical,AutoSearch,AutoSearch,v3 M1,采B 推翻A：在重算与换出方案空间中择优
+S68,mechanism,AutoSearch,Learned,AutoSearch,v3 M1,2026-09-21 作者复核确认 agreed=AutoSearch（修正原表注记与 agreed 列的不一致）；依R9 M1例表已把同为RL的AutoPhase记AutoSearch，RL在此驱动搜索而非直接输出决策
+S70,mechanism,AutoSearch,Other,AutoSearch,v3 M2,两裁决一致：自带调度搜索 非纯表示层
+S75,mechanism,AutoSearch,Other,AutoSearch,v3 M2,两裁决一致
+S79,mechanism,Other,Learned,Other,coding-rubric-v2 §0/§1,采A：§0限定机制须产生选精度/调度/放置/功耗/代码变换之一 掩码学习不在其列
+S80,mechanism,AutoSearch,Learned,AutoSearch,coding-rubric-v2 §1,采A：§1首行明列设计空间搜索→AutoSearch
+S81,mechanism,Other,Analytical,Other,coding-rubric-v2 §0/§1,采A：逐层数值重构非代价模型 同S79
+S84,mechanism,AutoSearch,Analytical,AutoSearch,coding-rubric-v2 §1,采A：稀疏更新方案由进化搜索选出 §1首行
+S88,mechanism,AutoSearch,Analytical,AutoSearch,coding-rubric-v2 §1,两裁决一致：tiling形式化为约束规划
+S89,mechanism,AutoSearch,Other,AutoSearch,coding-rubric-v2 §1,两裁决一致：可微NAS属设计空间搜索
+S90,mechanism,Analytical,AutoSearch,Analytical,v3 M1,采A：作者自述rule-based 无候选空间遍历
+S01,object_type,专用加速器与体系结构,测量与基准设施,测量与基准设施,v3 一,两裁决一致 推翻A：贡献是可迁移的估计方法论
+S02,object_type,专用加速器与体系结构,测量与基准设施,测量与基准设施,v3 一,采B 推翻A：codebook已将其category锚定为测量 对象类型应同向
+S18,object_type,通用编译栈,负载与模型层,通用编译栈,v3 一,采A：标题即compiler-based 方法学贡献依附编译栈；与S17记负载与模型层形成对照
+S19,object_type,通用编译栈,负载与模型层,通用编译栈,v3 一,两裁决一致
+S35,object_type,测量与基准设施,通用编译栈,专用加速器与体系结构,v3 一,采第三值 从对方裁决：架构级性能模型 依Accelergy先例
+S37,object_type,通用编译栈,专用加速器与体系结构,通用编译栈,v3 一,采A：该值定义明含"运行时" PowerLens是GPU上的DVFS运行时框架 非硬件设计
+S77,object_type,专用加速器与体系结构,通用编译栈,专用加速器与体系结构,v3 一,采A：v3明定"服务于专用加速器映射的工作"归此类 SAM面向流式数据流硬件
+S86,object_type,通用编译栈,专用加速器与体系结构,通用编译栈,v3 一,采A：Cortex-M为商用通用MCU；缺口R10 v3无手工kernel库归属
+S93,object_type,通用编译栈,负载与模型层,通用编译栈,v3 一,采A：缓冲分析属部署工具链 该值定义限于模型架构与压缩方法
+S95,object_type,测量与基准设施,通用编译栈,通用编译栈,v3 一,两裁决一致 推翻A；缺口R11 数据中心供电管理不属四值任一
+S97,object_type,测量与基准设施,专用加速器与体系结构,专用加速器与体系结构,v3 一,采B 推翻A 依Accelergy先例：架构级功耗模型
+S98,object_type,测量与基准设施,专用加速器与体系结构,专用加速器与体系结构,v3 一,采B 推翻A 同S97

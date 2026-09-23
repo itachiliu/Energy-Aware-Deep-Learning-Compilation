@@ -1,0 +1,10 @@
+$ /home/bingxing2/home/scx7es6/.conda/envs/cp310cu122/bin/python /home/bingxing2/home/scx7es6/job/measure_torch_scan.py --torch-name mobilenetv2 --dtype fp32 --batch 1 --tag mobilenetv2-torch-eager-fp32-b1 --reps 8 --duration-s 20.0 --out /home/bingxing2/home/scx7es6/scan_out_20260908_012226/results_scan.csv
+[ok] mobilenetv2-torch-eager-fp32-b1 rep1: lat=6.464ms p95=6.744 power=39.83641221374045 J/inf=0.2575189979699412
+[ok] mobilenetv2-torch-eager-fp32-b1 rep2: lat=6.511ms p95=7.860 power=39.76656488549617 J/inf=0.2589099803038027
+[ok] mobilenetv2-torch-eager-fp32-b1 rep3: lat=6.801ms p95=8.756 power=39.70633587786259 J/inf=0.27004626627689043
+[ok] mobilenetv2-torch-eager-fp32-b1 rep4: lat=6.376ms p95=6.518 power=39.86992366412212 J/inf=0.25419180269648156
+[ok] mobilenetv2-torch-eager-fp32-b1 rep5: lat=6.398ms p95=6.847 power=39.7987786259542 J/inf=0.25462857776915926
+[ok] mobilenetv2-torch-eager-fp32-b1 rep6: lat=6.399ms p95=6.513 power=39.84312977099234 J/inf=0.2549506999515236
+[ok] mobilenetv2-torch-eager-fp32-b1 rep7: lat=6.386ms p95=6.665 power=39.8564885496183 J/inf=0.2545234525051354
+[ok] mobilenetv2-torch-eager-fp32-b1 rep8: lat=6.424ms p95=6.663 power=39.761692307692314 J/inf=0.25543851794391625
+
