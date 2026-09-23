@@ -4,8 +4,9 @@ Supporting material for the survey
 **"A Survey of Energy-Aware Deep Learning Compilation: From Cost Models to
 Production Compiler Stacks"** (Xincheng HE, Yan LIU).
 
-Every mention of "supplementary material" in the manuscript refers to this
-repository. A four-page index of the material is provided in both languages:
+The manuscript points to this repository as the home of its supplementary
+material, under the short name "the supplementary repository". A four-page
+index of the material is provided in both languages:
 
 - English: [`docs/supplementary-material-en.pdf`](docs/supplementary-material-en.pdf)
 - 中文：[`docs/supplementary-material-cn.pdf`](docs/supplementary-material-cn.pdf)
@@ -15,7 +16,7 @@ repository. A four-page index of the material is provided in both languages:
 ## 中文说明
 
 本仓库是综述论文《面向能效的深度学习编译综述：从代价模型到生产级编译栈》的
-支撑材料。正文中出现的"补充材料"均指本仓库，入口文档为
+支撑材料。正文中的补充材料指向本仓库（正文简称"配套 GitHub 仓库"），入口文档为
 [`docs/supplementary-material-cn.pdf`](docs/supplementary-material-cn.pdf)（4 页索引）。
 
 材料分七组：文献编码与一致性记录、独立抽查协议、4×4 矩阵计数、0/18 生态表证据、
@@ -27,7 +28,7 @@ repository. A four-page index of the material is provided in both languages:
 
 | Path | What it contains | Where it supports the paper |
 |---|---|---|
-| `docs/` | Supplementary index document (PDF + LaTeX), Chinese and English | All references to "supplementary material" |
+| `docs/` | Supplementary index document (PDF + LaTeX), Chinese and English | Every pointer to the supplementary repository |
 | `coding/` | Two-coder coding of the 121 included studies, the controlled vocabularies, the disagreement list and the adjudication records | §II-F methodology; the Cohen's κ table; Appendix A |
 | `coding/kappa/` | κ computation, reconciliation merge, appendix synchronisation scripts and their reports | §II-F; reproducibility of Appendix A |
 | `audit/` | Rule-based historical coding, internal consistency audit, non-author spot-check protocol and sample | §II-F; the transparency statement |
