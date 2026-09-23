@@ -1,8 +1,0 @@
-coder A: coding-121-coderA.csv
-coder B: coding-121-coderB-filled.csv
-
-field              N     agreement     kappa
-category         121        0.736     0.706
-boundary         121        0.545     0.258
-granularity      121        0.603     0.483
-mechanism        121        0.438     0.290

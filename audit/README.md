@@ -20,9 +20,8 @@ run `audit_coding.py` to obtain the agreement rate and Cohen's κ. The sampled
 |---|---|
 | `code_matrix.py`, `internal-audit.md` | Rule-based historical coding and its audit |
 | `appendix-matrix-code.csv` | Machine-readable mirror of Appendix A, including the object-type column |
-| `audit_internal.py`, `compute_audit30.py`, `audit30-report.txt` | Audit scripts and their reports |
 | `coding-audit-protocol.md` | Protocol for an independent, non-author spot check |
-| `coding-audit-sample30.csv`, `-blank.csv`, `-filled.csv`, `-selection.txt` | The 30-item sample, its blank form, the worked example and the selection log |
+| `coding-audit-sample30.csv` | The 30-item sample sheet to be filled by the auditor |
 | `audit_coding.py` | Computes agreement and κ from the filled sample |
 | `audit_scope_appendix_consistency.py`, `crosscheck_appendix.py` | Consistency checks binding the scope section, Appendix A and the machine-readable copy |
 
@@ -44,9 +43,8 @@ Cohen's κ。30 条抽样由 `coding-audit-sample30-selection.txt` 记录。
 |---|---|
 | `code_matrix.py`、`internal-audit.md` | 规则式历史编码及其审计 |
 | `appendix-matrix-code.csv` | 附录 A 的机器可读镜像（含对象类型列） |
-| `audit_internal.py`、`compute_audit30.py`、`audit30-report.txt` | 审计脚本与报告 |
 | `coding-audit-protocol.md` | 非作者独立抽查协议 |
-| `coding-audit-sample30*.csv`、`-selection.txt` | 30 条抽样、空白表、示例与抽样说明 |
+| `coding-audit-sample30.csv` | 供审计者填写的 30 条抽样表 |
 | `audit_coding.py` | 由填好的抽样表计算一致率与 κ |
 | `audit_scope_appendix_consistency.py`、`crosscheck_appendix.py` | 范围界定、附录 A 与机器副本之间的一致性核对 |
 

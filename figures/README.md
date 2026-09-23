@@ -15,7 +15,6 @@ experiment data and live in `experiment/scripts/`.
 | `scripts/render_drawio.py` | Renders a `.drawio` file to a single-page PDF and reports text that overflows its box |
 | `scripts/make_category_chart_v2.py` | Ten-category distribution (Figure 3) |
 | `scripts/make_energy_ops_chart.py` | Relative energy magnitude of operations (Figure 5) |
-| `scripts/make_matrix_view_proposal.py` | Matrix view of the organising skeleton |
 
 The exported PDF is scaled to the column width by LaTeX, so a tighter export
 page yields a larger effective font size in the printed figure.
@@ -34,6 +33,5 @@ page yields a larger effective font size in the printed figure.
 | `scripts/render_drawio.py` | 把 `.drawio` 渲染为单页 PDF，并报告文字是否超出所属盒子 |
 | `scripts/make_category_chart_v2.py` | 十类分布图（图 3） |
 | `scripts/make_energy_ops_chart.py` | 各操作的相对能耗量级图（图 5） |
-| `scripts/make_matrix_view_proposal.py` | 组织骨架的矩阵视图 |
 
 导出的 PDF 由 LaTeX 按栏宽缩放，因此导出页面越紧凑，图内等效字号越大。

@@ -14,16 +14,14 @@ agreement statistics.
 
 | File | Role |
 |---|---|
-| `coding-instructions.md` | Operating instructions for the coders |
 | `coding-rubric-v2.md`, `coding-rubric-v3.md` | The controlled vocabulary and decision rules, v2 and the extended v3 |
 | `codebook-v2-worked-examples.csv`, `codebook-v3-worked-examples.csv` | Worked examples that fix the vocabulary |
 | `coding-sheet-A-v2.csv`, `coding-sheet-A-v3.csv` | Coder A, first-round independent coding |
 | `coding-sheet-B-v2.csv`, `coding-sheet-B-v3.csv` | Coder B, first-round independent coding |
-| `coding-121-coderA.csv`, `coding-121-coderB-v2.csv`, `coding-121-coderB-v3.csv` | Coder sheets in the long format used by the κ scripts |
 | `reconciliation-sheet.csv` | The 96 disagreeing units |
 | `reconciliation-resolution-1-full.csv`, `reconciliation-resolution-2.csv` | The two per-unit reconciliation rounds |
 | `reconciliation-resolution-final.txt` | The single authoritative resolution table covering all 96 units |
-| `adjudication-round3-guide.md`, `adjudication-round3-rules.csv`, `adjudication-round3-coder-A.csv`, `-coder-B.csv`, `-singles.csv` | Third-round criterion-first adjudication package |
+| `adjudication-round3-guide.md`, `adjudication-round3-rules.csv`, `adjudication-round3-coder-A.csv`, `-coder-B.csv` | Third-round criterion-first adjudication package |
 | `coding-121-final.csv` | **Final coding**, the source of truth for Appendix A and every count in the paper |
 | `kappa/` | κ computation, reconciliation merge and appendix synchronisation scripts with their reports |
 
@@ -49,7 +47,6 @@ adjudication results live in separate files.
 
 | 文件 | 作用 |
 |---|---|
-| `coding-instructions.md` | 编码者操作说明 |
 | `coding-rubric-v2.md`、`coding-rubric-v3.md` | 受控词表与判据，v2 及扩充后的 v3 |
 | `codebook-v2-worked-examples.csv`、`codebook-v3-worked-examples.csv` | 固定词表口径的示例 |
 | `coding-sheet-A-v2.csv`、`coding-sheet-A-v3.csv` | 编码者 A 第一轮独立编码 |

@@ -27,12 +27,20 @@ by precision, kernel selection and memory-access profile.
 | `ENV_AND_EXPERIMENT.md` | Environment, job layout and experiment log |
 | `ENV_REQUIREMENTS.md` | Required packages and acceptance commands |
 | `SCAN_SUPPLEMENT.md` | Supplement describing the configuration scan |
-| `batch2_5models_results.csv` | Aggregated results of the second batch |
-| `data/` | Raw per-run measurements, one directory per scan, plus the packed archives |
-| `job/` | Self-contained job package: SLURM scripts, model export, measurement and analysis code |
+| `batch2_5models_results.csv` | Aggregated second-batch results, the complete configuration matrix quoted in the paper |
+| `data/` | Per-scan result tables and summaries, `environment-snapshots.md`, and `raw-measurement-logs.zip` holding the 117 per-run measurement logs |
+| `job/` | The measurement pipeline: the two SLURM entry points and the Python modules they call |
 | `scripts/` | Plotting scripts for Figures 10–12 |
 | `scan_latex_fragment.tex` | The table fragment used in the paper |
 | `README-cn.md` | The original Chinese description of the package |
+
+The job package keeps the code path that produced the reported numbers:
+`scan.slurm` and `scan_x86.slurm` drive `scan_entrypoint.sh` and
+`scan_x86_entrypoint.sh`, which call `export_scan_models.py` / `fetch_models.py`,
+`run_scan_all.py`, the three `measure_*.py` modules, `power.py` and
+`summarize_scan.py`. Environment probes, the Nsight Compute harness and the
+earlier TensorRT-only path are not included because none of them contributed to
+the reported results.
 
 **Measurement conventions.** J/inf (gross) is average power divided by
 throughput and includes static power; J/inf (net) additionally subtracts the
@@ -64,12 +72,18 @@ H3：跨编译栈或编译决策的能耗差异可被精度、内核选择与访
 | `ENV_AND_EXPERIMENT.md` | 环境、作业布局与实验记录 |
 | `ENV_REQUIREMENTS.md` | 依赖包与验收命令 |
 | `SCAN_SUPPLEMENT.md` | 配置扫描说明 |
-| `batch2_5models_results.csv` | 批次二聚合结果 |
-| `data/` | 逐次原始测量，每轮扫描一个目录，另附打包存档 |
-| `job/` | 自包含作业包：SLURM 脚本、模型导出、测量与分析代码 |
+| `batch2_5models_results.csv` | 批次二聚合结果，即正文引用的完整配置矩阵 |
+| `data/` | 各轮结果表与摘要、`environment-snapshots.md`，以及汇总 117 份逐次测量日志的 `raw-measurement-logs.zip` |
+| `job/` | 测量流水线：两个 SLURM 入口及其调用的 Python 模块 |
 | `scripts/` | 图 10--12 的绘图脚本 |
 | `scan_latex_fragment.tex` | 正文使用的表格片段 |
 | `README-cn.md` | 作业包最初的完整中文说明 |
+
+作业包只保留产出论文数字的代码路径：`scan.slurm`、`scan_x86.slurm` 分别调用
+`scan_entrypoint.sh`、`scan_x86_entrypoint.sh`，后者再调用
+`export_scan_models.py` / `fetch_models.py`、`run_scan_all.py`、三个
+`measure_*.py`、`power.py` 与 `summarize_scan.py`。环境探测脚本、Nsight Compute
+采集脚本与更早的纯 TensorRT 路径未纳入，因为它们都未参与论文报告的测量结果。
 
 **测量口径。** J/inf（gross）为平均功耗除以吞吐，含静态功耗；J/inf（net）另扣除
 冷态 idle。功耗为 GPU 整卡（NVML / `nvidia-smi`），不含主机 CPU 与内存。

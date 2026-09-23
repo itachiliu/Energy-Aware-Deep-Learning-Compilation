@@ -28,20 +28,25 @@ All evidence beyond the main text is grouped by purpose into seven sets. Paths a
   \item \textbf{S2, matrix counts}: \texttt{matrix/matrix-counts-4x4.md},
     \texttt{matrix-counts-4x4.tex}, \texttt{matrix/count\_matrix.py};
   \item \textbf{S3, coding and agreement}: \texttt{coding/coding-121-final.csv},
-    \texttt{coding-sheet-A/B-v2.csv}, \texttt{-v3.csv},
-    \texttt{codebook-*-worked-examples.csv},
-    \texttt{reconciliation-sheet.csv},
-    \texttt{reconciliation-resolution-1-full.csv},
-    \texttt{reconciliation-resolution-2.csv},
-    \texttt{reconciliation-resolution-final.txt},
-    and the $\kappa$ scripts and reports under \texttt{coding/kappa/};
+    the four first-round sheets \texttt{coding-sheet-A/B-v2.csv} and
+    \texttt{-v3.csv}, the two codebooks
+    \texttt{codebook-*-worked-examples.csv}, the controlled vocabularies
+    \texttt{coding-rubric-v2.md} and \texttt{-v3.md}, the disagreement list
+    \texttt{reconciliation-sheet.csv}, the two reconciliation rounds
+    \texttt{reconciliation-resolution-1-full.csv} and \texttt{-2.csv}, the
+    final resolution table \texttt{reconciliation-resolution-final.txt}, the
+    third-round adjudication package \texttt{adjudication-round3-*}, and the
+    $\kappa$, merge and appendix-synchronisation scripts with their reports
+    under \texttt{coding/kappa/};
   \item \textbf{S4, historical audit}: \texttt{audit/appendix-matrix-code.csv},
-    \texttt{code\_matrix.py}, \texttt{audit\_internal.py},
-    \texttt{internal-audit.md};
+    \texttt{code\_matrix.py}, \texttt{internal-audit.md};
   \item \textbf{S5, independent spot check}: \texttt{audit/coding-audit-sample30.csv},
     \texttt{coding-audit-protocol.md}, \texttt{audit\_coding.py};
-  \item \textbf{S6, small-scale validation experiment}: \texttt{experiment/}
-    (protocol, raw data, job package and plotting scripts);
+  \item \textbf{S6, small-scale validation experiment}: \texttt{experiment/},
+    holding the protocol, the per-scan result tables, the environment
+    snapshots, the job package and the plotting scripts; the per-run
+    measurement logs are collected in
+    \texttt{experiment/data/raw-measurement-logs.zip};
   \item \textbf{S7, post-window tracking and environment}:
     \texttt{methodology/2026-preprint-tracking.md},
     \texttt{experiment/ENV\_REQUIREMENTS.md};
@@ -141,7 +146,7 @@ Independent coding produced 96 disagreeing units (category 24, granularity 30, m
 If a journal or reviewer asks for a non-author check: a third party fills the independent columns of \texttt{audit/coding-audit-sample30.csv} following \texttt{audit/coding-audit-protocol.md}, then runs \texttt{audit/audit\_coding.py} to obtain the agreement rate and Cohen's $\kappa$.
 
 \section{S6. Small-scale validation experiment}
-For the experiment reported in the small-scale validation experiment section, the measurement protocol, the raw per-run measurements, the configuration matrix, the job package and the plotting scripts are all under \texttt{experiment/}: the description is \texttt{experiment/README.md}, the environment and acceptance commands are \texttt{experiment/ENV\_AND\_EXPERIMENT.md}, the per-run measurements are under \texttt{experiment/data/}, the job package is \texttt{experiment/job/}, and the plotting scripts are \texttt{experiment/scripts/}.
+For the experiment reported in the small-scale validation experiment section, the measurement protocol, the raw per-run measurements, the configuration matrix, the job package and the plotting scripts are all under \texttt{experiment/}: the description is \texttt{experiment/README.md}, the environment and acceptance commands are \texttt{experiment/ENV\_AND\_EXPERIMENT.md}, the per-scan result tables and summaries are under \texttt{experiment/data/} together with the archived per-run logs, the job package is \texttt{experiment/job/}, and the plotting scripts are \texttt{experiment/scripts/}. The complete configuration matrix of the second batch is also given directly as \texttt{experiment/batch2\_5models\_results.csv}.
 
 \section{S7. Post-window tracking and reproduction environment}
 The list of preprints tracked after the May 2026 search window (MileStone, AutoPass, DualScale) is \texttt{methodology/2026-preprint-tracking.md}; the environment and acceptance commands needed for the second experiment batch are \texttt{experiment/ENV\_REQUIREMENTS.md}.

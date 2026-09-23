@@ -1,5 +1,0 @@
-audit: coding-audit-sample30-filled.csv  reference: coding-121-coderA.csv
-
-field              N     agreement     kappa
-granularity       30        0.700     0.604
-mechanism         30        0.467     0.262

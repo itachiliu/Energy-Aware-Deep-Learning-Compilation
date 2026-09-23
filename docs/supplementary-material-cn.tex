@@ -29,20 +29,21 @@
   \item \textbf{S2 · 矩阵计数}：\texttt{matrix/matrix-counts-4x4.md}、
     \texttt{matrix-counts-4x4.tex}、\texttt{matrix/count\_matrix.py}；
   \item \textbf{S3 · 编码与一致性}：\texttt{coding/coding-121-final.csv}、
-    \texttt{coding-sheet-A/B-v2.csv}、\texttt{-v3.csv}、
-    \texttt{codebook-*-worked-examples.csv}、
-    \texttt{reconciliation-sheet.csv}、
-    \texttt{reconciliation-resolution-1-full.csv}、
-    \texttt{reconciliation-resolution-2.csv}、
-    \texttt{reconciliation-resolution-final.txt}、
-    以及 \texttt{coding/kappa/} 下的 $\kappa$ 脚本与报告；
+    四份第一轮独立编码表 \texttt{coding-sheet-A/B-v2.csv} 与 \texttt{-v3.csv}、
+    两份示例 \texttt{codebook-*-worked-examples.csv}、受控词表
+    \texttt{coding-rubric-v2.md} 与 \texttt{-v3.md}、争议清单
+    \texttt{reconciliation-sheet.csv}、两轮复议记录
+    \texttt{reconciliation-resolution-1-full.csv} 与 \texttt{-2.csv}、
+    最终决议表 \texttt{reconciliation-resolution-final.txt}、第三轮裁定包
+    \texttt{adjudication-round3-*}，以及 \texttt{coding/kappa/} 下的 $\kappa$、
+    归并与附录同步脚本及其报告；
   \item \textbf{S4 · 历史审计}：\texttt{audit/appendix-matrix-code.csv}、
-    \texttt{code\_matrix.py}、\texttt{audit\_internal.py}、
-    \texttt{internal-audit.md}；
+    \texttt{code\_matrix.py}、\texttt{internal-audit.md}；
   \item \textbf{S5 · 独立抽查}：\texttt{audit/coding-audit-sample30.csv}、
     \texttt{coding-audit-protocol.md}、\texttt{audit\_coding.py}；
-  \item \textbf{S6 · 最小验证实验}：\texttt{experiment/}（协议、原始数据、
-    作业包与绘图脚本）；
+  \item \textbf{S6 · 最小验证实验}：\texttt{experiment/}（协议、各轮结果表、
+    环境快照、作业包与绘图脚本）；逐次测量的原始日志汇总在
+    \texttt{experiment/data/raw-measurement-logs.zip}；
   \item \textbf{S7 · 追踪与环境}：\texttt{methodology/2026-preprint-tracking.md}、
     \texttt{experiment/ENV\_REQUIREMENTS.md}；
   \item \textbf{检索与筛选}：\texttt{methodology/prisma\_counts.csv}，
@@ -162,12 +163,12 @@ $\kappa=0.56$，其偏低的取值正是扩充手册中 M1/M2 判据并重做该
 的独立列，运行 \texttt{audit/audit\_coding.py} 输出一致率与 Cohen's $\kappa$。
 
 \section{S6 · 最小验证实验}
-本文“小规模验证实验”一节报告的实验，其测量协议、原始逐次测量、配置矩阵、
-作业包与绘图脚本均在 \texttt{experiment/} 下：说明见
-\texttt{experiment/README.md}，环境与验收命令见
-\texttt{experiment/ENV\_AND\_EXPERIMENT.md}，逐次测量见
-\texttt{experiment/data/}，作业包见 \texttt{experiment/job/}，
-绘图脚本见 \texttt{experiment/scripts/}。
+本文“小规模验证实验”一节报告的实验，其测量协议、逐次测量、配置矩阵、作业包与
+绘图脚本均在 \texttt{experiment/} 下：说明见 \texttt{experiment/README.md}，
+环境与验收命令见 \texttt{experiment/ENV\_AND\_EXPERIMENT.md}，各轮结果表与摘要
+连同归档的逐次测量日志见 \texttt{experiment/data/}，作业包见
+\texttt{experiment/job/}，绘图脚本见 \texttt{experiment/scripts/}。批次二的
+完整配置矩阵另以 \texttt{experiment/batch2\_5models\_results.csv} 单独给出。
 
 \section{S7 · 2026 窗口后追踪与复现环境}
 2026 年 5 月检索窗口后的预印本追踪（MileStone、AutoPass、DualScale）清单见
