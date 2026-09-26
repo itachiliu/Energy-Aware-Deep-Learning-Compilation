@@ -1,4 +1,4 @@
-S,BibKey,Name,Year,Venue,Category,NearestSection,Subtype,Open,ObjectType,Mechanism,Granularity
+﻿S,BibKey,Name,Year,Venue,Category,NearestSection,Subtype,Open,ObjectType,Mechanism,Granularity
 S01,yang\_method\_2017,Yang 等：A Method to Estimate the Energy Consumption of Deep Neural Networks,2017,Asilomar,建模,\S\ref{sec:modeling},解析估计,否,测量与基准设施,Analytical,Loop/Op
 S02,ghose2021mensa,Boroumand 等：Google Neural Network Models for Edge Devices,2021,PACT,测量,\S\ref{sec:measurement},真机实测,否,测量与基准设施,Other,Other
 S03,wu\_accelergy\_2019,Wu 等：Accelergy,2019,ICCAD,建模,\S\ref{sec:modeling},解析模型,是,专用加速器与体系结构,Analytical,Other
@@ -26,8 +26,8 @@ S24,ding\_hidet\_2023,Ding 等：Hidet,2023,ASPLOS,循环层,\S\ref{sec:loop},�
 S25,adams\_learning\_2019,Adams 等：Learning to Optimize Halide with Tree Search,2019,SIGGRAPH,循环层,\S\ref{sec:loop},自动调度,是,通用编译栈,AutoSearch,Loop/Op
 S26,baghdadi\_tiramisu\_2019,Baghdadi 等：Tiramisu,2019,CGO,循环层,\S\ref{sec:loop},多面体编译,是,通用编译栈,Other,Loop/Op
 S27,vasilache\_next\_2019,Vasilache 等：Tensor Comprehensions,2019,ACM TACO,循环层,\S\ref{sec:loop},多面体编译,是,通用编译栈,AutoSearch,Loop/Op
-S28,multinpu2026,Compute-Efficient Modelling of Multi-NPU Inference on Edge MPSoCs,2026,ACM TECS,建模,\S\ref{sec:modeling},建模+系统调度,否,专用加速器与体系结构,Analytical,Placement
-S29,risso2023odimo,Risso 等：ODiMO,2023,DATE,异构,\S\ref{sec:hetero},多目标放置,是,专用加速器与体系结构,Learned,Placement
+S28,multinpu2026,Compute-Efficient Modelling of Multi-NPU Inference on Edge MPSoCs,2026,ACM TACO,建模,\S\ref{sec:modeling},建模+系统调度,否,专用加速器与体系结构,Analytical,Placement
+S29,risso2023odimo,Risso 等：ODiMO,2023,ISLPED,异构,\S\ref{sec:hetero},训练期放置搜索,是,专用加速器与体系结构,Learned,Placement
 S30,jeong2022band,Jeong 等：Band,2022,MobiSys,异构,\S\ref{sec:hetero},系统调度,是,通用编译栈,AutoSearch,Placement
 S31,adms2025,ADMS: Optimizing Multi-DNN Scheduling on Mobile Devices,2025,TMC,异构,\S\ref{sec:hetero},系统调度,否,通用编译栈,AutoSearch,Placement
 S32,nestc2024,NEST-C,2024,ETRI J.,异构,\S\ref{sec:hetero},编译器框架,否,通用编译栈,AutoSearch,Placement
@@ -36,20 +36,20 @@ S34,addanki2019placeto,Placeto,2019,NeurIPS,异构,\S\ref{sec:hetero},学习型�
 S35,han2025dvfsaware,Han 等：DVFS-aware DNN Inference Modeling,2025,ICC,建模,\S\ref{sec:modeling},真机/建模结合,否,专用加速器与体系结构,Analytical,Power
 S36,dvfo2024,DVFO,2024,TMC,功耗,\S\ref{sec:power},联合优化机制,否,通用编译栈,Learned,Power
 S37,powerlens2024,PowerLens,2024,DAC,功耗,\S\ref{sec:power},运行时调控,否,通用编译栈,Learned,Power
-S38,powerflow2026,Chen等：PowerFlow-DNN,2026,ISLPED,功耗,\S\ref{sec:power},编译期编排,否,专用加速器与体系结构,Analytical,Power
+S38,powerflow2026,Chen等：PowerFlow-DNN,2026,ISLPED,功耗,\S\ref{sec:power},编译期编排,是,专用加速器与体系结构,Analytical,Power
 S39,regate2025,ReGate,2025,MICRO,功耗,\S\ref{sec:power},ISA/硬件机制,是,专用加速器与体系结构,Analytical,Power
-S40,neu\_affine\_energy,Jayaweera等：Energy-Aware Tile Size Selection for Affine Programs on GPUs,2024,CGO,循环层,\S\ref{sec:loop},仿射变换建模,否,通用编译栈,AutoSearch,Loop/Op
+S40,neu\_affine\_energy,Jayaweera等：Energy-Aware Tile Size Selection for Affine Programs on GPUs,2024,CGO,循环层,\S\ref{sec:loop},能耗感知分块搜索,否,通用编译栈,AutoSearch,Loop/Op
 S41,haj-ali\_autophase\_2020,Haj-Ali 等：AutoPhase,2020,MLSys,AI4C,\S\ref{sec:ai4c},学习型 pass 排序,否,通用编译栈,AutoSearch,Other
 S42,cummins2025llm,Cummins 等：LLM Compiler,2025,CC,AI4C,\S\ref{sec:ai4c},基础模型优化,否,通用编译栈,Agentic,Other
 S43,compilerr1\_2025,Compiler-R1,2025,NeurIPS,AI4C,\S\ref{sec:ai4c},Agent/RL 优化,是,通用编译栈,Agentic,Other
 S44,zhao2025polymorphous,PolyMorphous,2025,IPDPS,循环层,\S\ref{sec:loop},变换基础设施,否,通用编译栈,Other,Loop/Op
 S45,greens2025,Generating Energy-efficient Code with LLMs,2025,GREENS (ICSE workshop),AI4C,\S\ref{sec:ai4c},能效导向生成,否,通用编译栈,Agentic,Other
 S46,mlcomp2021,MLComp,2021,DATE,AI4C,\S\ref{sec:ai4c},多目标编译,否,通用编译栈,Learned,Other
-S47,you2023zeus,Zeus,2023,NSDI,功耗,\S\ref{sec:power},系统前沿导航,是,通用编译栈,AutoSearch,Power
-S48,chung2024perseus,Perseus,2024,SOSP,功耗,\S\ref{sec:power},系统前沿导航,是,通用编译栈,AutoSearch,Power
+S47,you2023zeus,Zeus,2023,NSDI,功耗,\S\ref{sec:power},系统前沿导航,是,负载与模型层,AutoSearch,Power
+S48,chung2024perseus,Perseus,2024,SOSP,功耗,\S\ref{sec:power},系统前沿导航,是,负载与模型层,AutoSearch,Power
 S49,reagen2017bayesopt,Reagen 等：Bayesian DSE for Accelerators,2017,ISLPED,Pareto,\S\ref{sec:pareto},贝叶斯优化,否,专用加速器与体系结构,AutoSearch,Other
-S50,lu2023paretorank,Pareto Rank-preserving Surrogate Models,2023,ACM TACO,Pareto,\S\ref{sec:pareto},代理建模,否,专用加速器与体系结构,Learned,Other
-S51,10.1145/3676536.3676682,Multi-Objective Software-Hardware Co-Optimization for HD-PIM via Bayesian Optimization,2025,ICCAD,Pareto,\S\ref{sec:pareto},多目标贝叶斯优化,否,专用加速器与体系结构,AutoSearch,Other
+S50,benmeziane2023paretorank,Benmeziane 等：Pareto 序保持代理模型,2023,ACM TACO,Pareto,\S\ref{sec:pareto},代理建模,否,专用加速器与体系结构,Learned,Other
+S51,yang2024hdpim,Yang 等：面向 HD-PIM 的噪声感知贝叶斯多目标软硬件协同优化,2024,ICCAD,Pareto,\S\ref{sec:pareto},多目标贝叶斯优化,否,专用加速器与体系结构,AutoSearch,Other
 S52,cai\_neuralpower\_2017,Cai 等：NeuralPower,2017,ACML,建模,\S\ref{sec:modeling},学习型能耗预测,是,测量与基准设施,Learned,Loop/Op
 S53,rodrigues\_synergy\_2018,Rodrigues 等：SyNERGY,2018,PDPTA,建模,\S\ref{sec:modeling},真机实测+回归,是,测量与基准设施,Learned,Loop/Op
 S54,guo\_neurstrucenergy\_2024,Guo 等：NeurstrucEnergy,2024,Digital Commun. Netw.,建模,\S\ref{sec:modeling},图神经网络预测,否,测量与基准设施,Learned,Graph
@@ -70,37 +70,37 @@ S68,ahn\_chameleon\_2020,Ahn 等：Chameleon,2020,ICLR,循环层,\S\ref{sec:loop
 S69,anderson\_efficient\_2021,Anderson 等：GPU 自动调度,2021,OOPSLA,循环层,\S\ref{sec:loop},自动调度,是,通用编译栈,AutoSearch,Loop/Op
 S70,feng\_tensorir\_2023,Feng 等：TensorIR,2023,ASPLOS,循环层,\S\ref{sec:loop},IR 抽象,是,通用编译栈,AutoSearch,Loop/Op
 S71,shao\_tensor\_2022,Shao 等：MetaSchedule,2022,ASPLOS,循环层,\S\ref{sec:loop},自动调度,是,通用编译栈,AutoSearch,Loop/Op
-S72,chen\_eyeriss\_2019,Chen 等：Eyeriss v2,2019,JETCAS,稀疏,\S\ref{sec:loop},数据流设计,否,专用加速器与体系结构,Other,Other
-S73,kjolstad\_tensor\_2017,Kjolstad 等：TACO,2017,OOPSLA,稀疏,\S\ref{sec:loop},编译器构造,是,通用编译栈,Other,Loop/Op
-S74,chou\_format\_2018,Chou 等：Format Abstraction,2018,OOPSLA,稀疏,\S\ref{sec:loop},抽象设计,是,通用编译栈,Other,Loop/Op
-S75,ye\_sparsetir\_2023,Ye 等：SparseTIR,2023,ASPLOS,稀疏,\S\ref{sec:loop},编译抽象,是,通用编译栈,AutoSearch,Loop/Op
-S76,bik\_compiler\_2022,Bik 等：MLIR 稀疏张量支持,2022,ACM TACO,稀疏,\S\ref{sec:loop},编译器构造,是,通用编译栈,Other,Loop/Op
-S77,hsu\_sparse\_2023,Hsu 等：Sparse Abstract Machine,2023,ASPLOS,稀疏,\S\ref{sec:loop},编译目标抽象,是,专用加速器与体系结构,Other,Loop/Op
-S78,gale\_sparse\_2020,Gale 等：Sparse GPU Kernels,2020,SC,稀疏,\S\ref{sec:loop},内核实现,是,通用编译栈,Other,Other
-S79,zhou\_learning\_2021,Zhou 等：N:M 结构化稀疏,2021,ICLR,稀疏,\S\ref{sec:loop},稀疏模式设计,是,负载与模型层,Other,Other
-S80,pool\_channel\_2021,Pool \,2021,NeurIPS,稀疏,\S\ref{sec:loop},\S\ref{sec:loop},是,负载与模型层,AutoSearch,Other
-S81,frantar\_sparsegpt\_2023,Frantar \,2023,ICML,稀疏,\S\ref{sec:loop},\S\ref{sec:loop},是,负载与模型层,Other,Other
-S82,lin\_mcunet\_2020,Lin 等：MCUNet,2020,NeurIPS,TinyML,\S\ref{sec:open},协同设计,是,负载与模型层,AutoSearch,Other
-S83,lin\_mcunetv2\_2021,Lin 等：MCUNetV2,2021,NeurIPS,TinyML,\S\ref{sec:open},内存调度,是,负载与模型层,AutoSearch,Graph
-S84,lin\_ondevice\_2022,Lin 等：On-Device Training Under 256KB,2022,NeurIPS,TinyML,\S\ref{sec:open},系统协同,是,负载与模型层,AutoSearch,Graph
-S85,garofalo\_pulp-nn\_2019,Garofalo 等：PULP-NN,2019,Phil. Trans. A,TinyML,\S\ref{sec:open},内核库,是,专用加速器与体系结构,Other,Other
-S86,capotondi\_cmix-nn\_2020,Capotondi 等：CMix-NN,2020,IEEE TCAS-II,TinyML,\S\ref{sec:open},混合精度内核,是,通用编译栈,Other,Other
-S87,david\_tensorflow\_2021,David 等：TensorFlow Lite Micro,2021,MLSys,TinyML,\S\ref{sec:open},部署栈,是,通用编译栈,Other,Other
-S88,burrello\_dory\_2021,Burrello 等：DORY,2021,IEEE TC,TinyML,\S\ref{sec:open},编译与编排,是,专用加速器与体系结构,AutoSearch,Loop/Op
-S89,banbury\_micronets\_2021,Banbury 等：MicroNets,2021,MLSys,TinyML,\S\ref{sec:open},代价模型+NAS,是,负载与模型层,AutoSearch,Other
-S90,rusci\_memory-driven\_2020,Rusci 等：Memory-Driven Mixed Precision,2020,MLSys,TinyML,\S\ref{sec:open},混合精度量化,是,负载与模型层,Analytical,Graph
-S91,fedorov\_sparse\_2019,Fedorov 等：SpArSe,2019,NeurIPS,TinyML,\S\ref{sec:open},架构搜索,否,负载与模型层,AutoSearch,Other
-S92,liberis\_differentiable\_2022,Liberis \,2022,ACM IMWUT,TinyML,\S\ref{sec:open},\S\ref{sec:open},是,负载与模型层,Learned,Other
-S93,minakova\_buffer\_2020,Minakova \,2020,DSD,TinyML,\S\ref{sec:open},\S\ref{sec:open},否,通用编译栈,Analytical,Graph
+S72,chen\_eyeriss\_2019,Chen 等：Eyeriss v2,2019,JETCAS,稀疏,\S\ref{sec:special:sparse},数据流设计,否,专用加速器与体系结构,Other,Other
+S73,kjolstad\_tensor\_2017,Kjolstad 等：TACO,2017,OOPSLA,稀疏,\S\ref{sec:special:sparse},编译器构造,是,通用编译栈,Other,Loop/Op
+S74,chou\_format\_2018,Chou 等：Format Abstraction,2018,OOPSLA,稀疏,\S\ref{sec:special:sparse},抽象设计,是,通用编译栈,Other,Loop/Op
+S75,ye\_sparsetir\_2023,Ye 等：SparseTIR,2023,ASPLOS,稀疏,\S\ref{sec:special:sparse},编译抽象,是,通用编译栈,AutoSearch,Loop/Op
+S76,bik\_compiler\_2022,Bik 等：MLIR 稀疏张量支持,2022,ACM TACO,稀疏,\S\ref{sec:special:sparse},编译器构造,是,通用编译栈,Other,Loop/Op
+S77,hsu\_sparse\_2023,Hsu 等：Sparse Abstract Machine,2023,ASPLOS,稀疏,\S\ref{sec:special:sparse},编译目标抽象,是,专用加速器与体系结构,Other,Loop/Op
+S78,gale\_sparse\_2020,Gale 等：Sparse GPU Kernels,2020,SC,稀疏,\S\ref{sec:special:sparse},内核实现,是,通用编译栈,Other,Other
+S79,zhou\_learning\_2021,Zhou 等：N:M 结构化稀疏,2021,ICLR,稀疏,\S\ref{sec:special:sparse},稀疏模式设计,是,负载与模型层,Other,Other
+S80,pool\_channel\_2021,Pool \,2021,NeurIPS,稀疏,\S\ref{sec:special:sparse},\S\ref{sec:special:sparse},是,负载与模型层,AutoSearch,Other
+S81,frantar\_sparsegpt\_2023,Frantar \,2023,ICML,稀疏,\S\ref{sec:special:sparse},\S\ref{sec:special:sparse},是,负载与模型层,Other,Other
+S82,lin\_mcunet\_2020,Lin 等：MCUNet,2020,NeurIPS,TinyML,\S\ref{sec:special:tinyml},协同设计,是,负载与模型层,AutoSearch,Other
+S83,lin\_mcunetv2\_2021,Lin 等：MCUNetV2,2021,NeurIPS,TinyML,\S\ref{sec:special:tinyml},内存调度,是,负载与模型层,AutoSearch,Graph
+S84,lin\_ondevice\_2022,Lin 等：On-Device Training Under 256KB,2022,NeurIPS,TinyML,\S\ref{sec:special:tinyml},系统协同,是,负载与模型层,AutoSearch,Graph
+S85,garofalo\_pulp-nn\_2019,Garofalo 等：PULP-NN,2020,Phil. Trans. A,TinyML,\S\ref{sec:special:tinyml},内核库,是,专用加速器与体系结构,Other,Other
+S86,capotondi\_cmix-nn\_2020,Capotondi 等：CMix-NN,2020,IEEE TCAS-II,TinyML,\S\ref{sec:special:tinyml},混合精度内核,是,通用编译栈,Other,Other
+S87,david\_tensorflow\_2021,David 等：TensorFlow Lite Micro,2021,MLSys,TinyML,\S\ref{sec:special:tinyml},部署栈,是,通用编译栈,Other,Other
+S88,burrello\_dory\_2021,Burrello 等：DORY,2021,IEEE TC,TinyML,\S\ref{sec:special:tinyml},编译与编排,是,专用加速器与体系结构,AutoSearch,Loop/Op
+S89,banbury\_micronets\_2021,Banbury 等：MicroNets,2021,MLSys,TinyML,\S\ref{sec:special:tinyml},代价模型+NAS,是,负载与模型层,AutoSearch,Other
+S90,rusci\_memory-driven\_2020,Rusci 等：Memory-Driven Mixed Precision,2020,MLSys,TinyML,\S\ref{sec:special:tinyml},混合精度量化,是,负载与模型层,Analytical,Graph
+S91,fedorov\_sparse\_2019,Fedorov 等：SpArSe,2019,NeurIPS,TinyML,\S\ref{sec:special:tinyml},架构搜索,否,负载与模型层,AutoSearch,Other
+S92,liberis\_differentiable\_2022,Liberis \,2022,ACM IMWUT,TinyML,\S\ref{sec:special:tinyml},\S\ref{sec:special:tinyml},是,负载与模型层,Learned,Other
+S93,minakova\_buffer\_2020,Minakova \,2020,DSD,TinyML,\S\ref{sec:special:tinyml},\S\ref{sec:special:tinyml},否,通用编译栈,Analytical,Graph
 S94,xi\_smaug\_2020,Xi 等：SMAUG,2020,ACM TACO,建模,\S\ref{sec:modeling},全栈仿真,是,专用加速器与体系结构,Other,Other
-S95,kumbhare\_prediction\_2021,Kumbhare 等：Prediction-Based Power Oversubscription,2021,USENIX ATC,功耗,\S\ref{sec:power},预测+在线决策,否,通用编译栈,Learned,Power
+S95,kumbhare\_prediction\_2021,Kumbhare 等：Prediction-Based Power Oversubscription,2021,USENIX ATC,功耗,\S\ref{sec:power},预测+在线决策,否,负载与模型层,Learned,Power
 S96,tang\_impact\_2019,Tang 等：GPU DVFS 对深度学习能耗与性能的影响,2019,ACM e-Energy,测量,\S\ref{sec:measurement},大规模实测,否,测量与基准设施,Other,Other
 S97,guerreiro\_gpgpu\_2018,Guerreiro 等：多电压域 GPGPU 功耗建模,2018,IEEE HPCA,建模,\S\ref{sec:modeling},功耗建模,否,专用加速器与体系结构,Analytical,Power
 S98,kandiah\_accelwattch\_2021,Kandiah 等：AccelWattch,2021,MICRO,建模,\S\ref{sec:modeling},可标定功耗模型,是,专用加速器与体系结构,Analytical,Other
 S99,arafa\_verified\_2020,Arafa 等：NVIDIA GPU 指令级能耗测量,2020,ACM CF,测量,\S\ref{sec:measurement},细粒度实测,否,测量与基准设施,Other,Other
-S100,patel\_characterizing\_2024,Patel 等：云端 LLM 功耗管理机会刻画,2024,ISCA,测量,\S\ref{sec:measurement},系统刻画,否,测量与基准设施,Other,Other
-S101,patel\_splitwise\_2024,Patel 等：Splitwise,2024,ISCA,异构,\S\ref{sec:hetero},阶段分离,否,通用编译栈,Analytical,Placement
-S102,stojkovic\_dynamollm\_2025,Stojkovic 等：DynamoLLM,2025,HPCA,功耗,\S\ref{sec:power},动态重配置,否,通用编译栈,AutoSearch,Power
+S100,patel\_characterizing\_2024,Patel 等：云端 LLM 功耗管理机会刻画,2024,ASPLOS,测量,\S\ref{sec:measurement},系统刻画,否,测量与基准设施,Other,Other
+S101,patel\_splitwise\_2024,Patel 等：Splitwise,2024,ISCA,异构,\S\ref{sec:hetero},阶段分离,否,负载与模型层,Analytical,Placement
+S102,stojkovic\_dynamollm\_2025,Stojkovic 等：DynamoLLM,2025,HPCA,功耗,\S\ref{sec:power},动态重配置,否,负载与模型层,AutoSearch,Power
 S103,venkatakeerthy\_ir2v\_2020,VenkataKeerthy 等：IR2Vec,2020,ACM TACO,AI4C,\S\ref{sec:ai4c},程序表示学习,是,通用编译栈,Learned,Other
 S104,cummins\_compilergym\_2022,Cummins 等：CompilerGym,2022,CGO,AI4C,\S\ref{sec:ai4c},环境与基准,是,测量与基准设施,Other,Other
 S105,haj-ali\_neurovectorizer\_2020,Haj-Ali 等：NeuroVectorizer,2020,CGO,AI4C,\S\ref{sec:ai4c},学习型变换,是,通用编译栈,Learned,Loop/Op
@@ -108,15 +108,15 @@ S106,zhang\_compass\_2025,Zhang 等：COMPASS,2025,TASE,AI4C,\S\ref{sec:ai4c},Ag
 S107,taneja\_llm-vectorizer\_2025,Taneja 等：LLM-Vectorizer,2025,CGO,AI4C,\S\ref{sec:ai4c},LLM+形式验证,是,通用编译栈,Agentic,Loop/Op
 S108,italiano\_finding\_2025,Italiano \,2025,CC,AI4C,\S\ref{sec:ai4c},\S\ref{sec:ai4c},是,通用编译栈,Agentic,Other
 S109,reddi\_mlperf\_2020,Reddi 等：MLPerf Inference,2020,ISCA,测量,\S\ref{sec:measurement},基准,是,测量与基准设施,Other,Other
-S110,mattson\_mlperf\_2020,Mattson 等：MLPerf Training,2020,IEEE Micro,测量,\S\ref{sec:measurement},基准,是,测量与基准设施,Other,Other
+S110,mattson\_mlperf\_2020,Mattson 等：MLPerf Training,2020,MLSys,测量,\S\ref{sec:measurement},基准,是,测量与基准设施,Other,Other
 S111,banbury\_mlperf\_2021,Banbury 等：MLPerf Tiny,2021,NeurIPS D&B,测量,\S\ref{sec:measurement},\S\ref{sec:measurement},是,测量与基准设施,Other,Other
 S112,tschand\_mlperf\_2025,Tschand 等：MLPerf Power,2025,HPCA,测量,\S\ref{sec:measurement},基准,是,测量与基准设施,Other,Other
-S113,khan\_rapl\_2018,Khan 等：RAPL 适用性研究,2018,ACM TOMPECS,测量,\S\ref{sec:measurement},测量方法学,否,测量与基准设施,Other,Other
-S114,jay\_experimental\_2023,Jay 等：软件功耗计横向对照,2023,IEEE/ACM CCGrid,测量,\S\ref{sec:measurement},测量方法学,是,测量与基准设施,Other,Other
+S113,khan\_rapl\_2018,Khan 等：RAPL in Action：使用 RAPL 进行功耗测量的经验,2018,ACM TOMPECS,测量,\S\ref{sec:measurement},测量方法学,否,测量与基准设施,Other,Other
+S114,jay\_experimental\_2023,Jay 等：软件功耗计的实测比较：聚焦 CPU 与 GPU,2023,IEEE/ACM CCGrid,测量,\S\ref{sec:measurement},测量方法学,是,测量与基准设施,Other,Other
 S115,fahad\_comparative\_2019,Fahad 等：计算能耗测量方法比较,2019,Energies,测量,\S\ref{sec:measurement},测量方法学,否,测量与基准设施,Other,Other
-S116,holly\_profiling\_2020,Holly 等：Jetson 平台能耗剖析,2020,COINS,测量,\S\ref{sec:measurement},真机实测,否,测量与基准设施,Other,Other
+S116,holly\_profiling\_2020,Holly 等：NVIDIA Jetson Nano 上深度神经网络的能耗剖析,2020,IGSC Workshops,测量,\S\ref{sec:measurement},真机实测,否,测量与基准设施,Other,Other
 S117,gupta\_chasing\_2021,Gupta 等：Chasing Carbon,2021,HPCA,测量,\S\ref{sec:measurement},碳排分解,否,测量与基准设施,Other,Other
 S118,gupta\_act\_2022,Gupta 等：ACT,2022,ISCA,建模,\S\ref{sec:modeling},碳排建模,是,测量与基准设施,Analytical,Other
 S119,faiz\_llmcarbon\_2024,Faiz 等：LLMCarbon,2024,ICLR,建模,\S\ref{sec:modeling},端到端预测,是,测量与基准设施,Analytical,Other
-S120,li\_clover\_2023,Li 等：Clover,2023,SC,Pareto,\S\ref{sec:pareto},碳感知服务,否,通用编译栈,AutoSearch,Graph
-S121,luccioni\_power\_2024,Luccioni 等：推理部署成本测量,2024,FAccT,测量,\S\ref{sec:measurement},横向实测,是,测量与基准设施,Other,Other
+S120,li\_clover\_2023,Li 等：Clover,2023,SC,Pareto,\S\ref{sec:pareto},碳感知服务,否,负载与模型层,AutoSearch,Graph
+S121,luccioni\_power\_2024,Luccioni 等：Power Hungry Processing：AI 部署成本的功耗驱动因素,2024,FAccT,测量,\S\ref{sec:measurement},横向实测,是,测量与基准设施,Other,Other
